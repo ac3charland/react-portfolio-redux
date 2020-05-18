@@ -1,25 +1,7 @@
-# React Template App
+# Don't you mean react-redux-portfolio?
 
-This app is meant to serve as the basis for my future React apps. It has my preferred technologies, testing frameworks, and project structure pre-configured so that I don't have to set up the same boilerplate with every project. If you're curious about my opinions and preferences when it comes to frontend development, this is a great place to look!
+Nope. This app is a do-over of a [React-based portfolio site](https://github.com/ac3charland/React-Portfolio) I started about a year ago--hence, "react-portfolio-redux."
 
-## To Copy*:
-
-0. Clone this project if it is not already on your machine.
-0. When you want to create a new app based on this template, create a new directory for the project with `mkdir [new-project-name-here]`
-0. Copy/paste this repo's files & folders into the new directory.
-0. Install packages with `yarn`
-0. Confirm everything is working as expected by running `yarn run test`
-0. Setup the new project's git repo with `git init`
-0. Create an initial commit with `git add . && git commit -m "Initial commit from template app"`.
-0. Create a new remote repository for the app on your preferred host (GitHub, Bitbucket, etc.)
-0. Add the remote origin with `git remote add origin [url-provided-by-repo]`
-0. Commit to remote with `git push -u origin master`
-0. Begin development!
-
-<sup>*If these instructions seem patronizingly specific, it's not because I don't trust your capabilities--I don't trust my own. I've burned myself one too many times by telling myself "Surely I'll remember how to do *this* forever!"</sup>
-
-## To Customize:
-There are several fields which will be different for every app, like site title, footer copyright owner, site icon, etc. Find these by searching for `CHANGE_ME` across the entire app directory, including file names. Change these fields/files.
 
 ## To Develop:
 - Install packages: `yarn`
@@ -28,10 +10,10 @@ There are several fields which will be different for every app, like site title,
 - Kill background app process: `yarn kill-background`
 - Run all tests (unit, visual, integration, and lint): `yarn test`
 - Run CI-only tests (all except visual): `yarn test:ci`
-- Run unit tests: `yarn run jest`
-- Run lint: `yarn run lint`
-- Run visual regression tests: `yarn run backstop:test`
-- Open integration tests: `yarn run cypress:open`
+- Run unit tests: `yarn jest`
+- Run lint: `yarn lint`
+- Run visual regression tests: `yarn backstop:test`
+- Open integration tests: `yarn cypress:open`
 
 ## Project Structure
 The app's JSX files are categorized into pages and components. The app's overall styles are set in `index.scss` and its style constants are defined in `globals.scss`. Each `.scss` file should import `globals.scss`.
