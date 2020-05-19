@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './nav-bar.scss'
-import {SECONDARY_PAGE_URL} from '../../utils/constants'
+import {SECONDARY_PAGE_URL, SITE_LOGO} from '../../utils/constants'
 
 const cb = 'navbar'
 
@@ -25,7 +25,9 @@ export default class NavBar extends Component {
 
         return (
             <div className={cb}>
-                <a className={`${cb}__home`} href='/'><h1 className={`${cb}__heading`}>Alex Charland</h1></a>
+                <a className={`${cb}__home`} href='/'>
+                    <img className={`${cb}__logo`} src={SITE_LOGO} alt='Alex Charland Frontend Web Developer Site Logo'/>
+                </a>
                 <div className={`${cb}__links ${menuCSS}`}>
                     <button className={`icon ${menuCSS}`} onClick={() => this.toggleMenu()}><i className={`fa ${menuIcon}`}></i></button>
                     <a id={'secondary-link'} className={`${cb}__link ${menuCSS}`} href={SECONDARY_PAGE_URL}>CHANGE_ME SECONDARY_LINK</a>

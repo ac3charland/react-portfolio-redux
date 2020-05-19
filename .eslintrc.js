@@ -62,6 +62,7 @@ module.exports = {
             exports: 'always-multiline',
             functions: 'never'
         }],
+        'jsx-quotes': ['error', 'prefer-single'],
         'key-spacing': 'error',
         'no-console': ['error', {allow: ['warn', 'error']}],
         'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],

@@ -34,14 +34,38 @@
     }
 }
 
+ @mixin scale($factor) {
+    -webkit-transform: scale($factor);
+    -moz-transform: scale($factor);
+    -ms-transform: scale($factor);
+    -o-transform: scale($factor);
+    transform: scale($factor);
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
 $content-width: 140rem;
 $navbar-height: 5rem;
 
+$font-size-h1: 5rem;
+$font-size-h2: 4rem;
+$font-size-h3: 3rem;
+$font-size-h4: 2.5rem;
+$font-size-h5: 2rem;
+$font-size-h6: 1.7rem;
 $font-size-large: 1.5rem;
 $font-size-normal: 1.3rem;
 $font-size-small: 1.1rem;
 
 $secondary-background-color: lightgray;
+
+$initial-slide-in-margin: -100rem;
 
 @include keyframes(fadeInFromNone) {
     0% {
@@ -58,4 +82,13 @@ $secondary-background-color: lightgray;
         display: block;
         opacity: 1;
     }
+}
+
+@include keyframes(slideInFromRight) {
+  from {
+    margin-right: $initial-slide-in-margin;
+  }
+  to {
+    margin-right: 0rem;
+  }
 }

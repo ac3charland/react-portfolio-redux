@@ -1,0 +1,24 @@
+@import "../../globals.scss";
+
+.landing {
+
+  &__title-wrapper {
+    padding: 25% 0 4rem;
+    text-align: right;
+  }
+
+  &__slide-in {
+    margin-right: $initial-slide-in-margin;
+    @include animation("slideInFromRight .5s forwards");
+  }
+  
+  &__heading {
+    font-size: $font-size-h2;
+    animation-delay: 1s;
+  }
+
+  &__subheading {
+    font-size: $font-size-h4;
+    animation-delay: 2s;
+  }
+}

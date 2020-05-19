@@ -1,0 +1,13 @@
+@import "../../globals.scss";
+
+.bio {
+    background-color: $secondary-background-color;
+
+    &__flex {
+        display: flex;
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
