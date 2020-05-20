@@ -21,6 +21,7 @@ export default class HomePage extends Component {
 
     render() {
 
+        // eslint-disable-next-line no-unused-vars
         const {visited} = this.props
 
         return (

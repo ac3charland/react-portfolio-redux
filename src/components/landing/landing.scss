@@ -1,14 +1,21 @@
 @import "../../globals.scss";
 
 .landing {
+  @include section-styling;
+  padding: 0 2rem;
 
   &__title-wrapper {
-    padding: 25% 0 4rem;
+    padding: 45rem 0 4rem;
     text-align: right;
+
+    @include small-screen {
+      padding-top: 35rem;
+      min-height: 10.5rem;
+    }
   }
 
   &__slide-in {
-    margin-right: $initial-slide-in-margin;
+    transform: $initial-offscreen-position;
     @include animation("slideInFromRight .5s forwards");
   }
   
@@ -20,5 +27,10 @@
   &__subheading {
     font-size: $font-size-h4;
     animation-delay: 2s;
+
+    @include small-screen {
+      max-width: 32.5rem;
+      margin: 0 0 0 auto;
+    }
   }
 }

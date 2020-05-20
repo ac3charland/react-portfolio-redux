@@ -14,12 +14,12 @@ module.exports = backstop.config({
         },
         {
             label: 'small-view',
-            width: 500,
+            width: 320,
             height: 568
         },
     ],
     scenarios: [
-        cs({label: 'home-page'}),
+        cs({label: 'home-page', delay: 4000}),
         cs({label: 'secondary', onReadyScript: 'navigate-to-secondary.js'}),
     ]
 })

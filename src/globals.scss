@@ -1,3 +1,19 @@
+$content-width: 120rem;
+
+$font-size-h1: 5rem;
+$font-size-h2: 4rem;
+$font-size-h3: 3rem;
+$font-size-h4: 2.5rem;
+$font-size-h5: 2rem;
+$font-size-h6: 1.7rem;
+$font-size-large: 1.5rem;
+$font-size-normal: 1.3rem;
+$font-size-small: 1.1rem;
+
+$secondary-background-color: lightgray;
+
+$initial-offscreen-position: translateX(100rem);
+
 @mixin small-screen {
     @media (max-width: 700px) {
         @content;
@@ -50,22 +66,10 @@
   transition: $args;
 }
 
-$content-width: 140rem;
-$navbar-height: 5rem;
-
-$font-size-h1: 5rem;
-$font-size-h2: 4rem;
-$font-size-h3: 3rem;
-$font-size-h4: 2.5rem;
-$font-size-h5: 2rem;
-$font-size-h6: 1.7rem;
-$font-size-large: 1.5rem;
-$font-size-normal: 1.3rem;
-$font-size-small: 1.1rem;
-
-$secondary-background-color: lightgray;
-
-$initial-slide-in-margin: -100rem;
+@mixin section-styling {
+    max-width: $content-width;
+    margin: 0 auto;
+}
 
 @include keyframes(fadeInFromNone) {
     0% {
@@ -86,9 +90,9 @@ $initial-slide-in-margin: -100rem;
 
 @include keyframes(slideInFromRight) {
   from {
-    margin-right: $initial-slide-in-margin;
+    transform: $initial-offscreen-position;
   }
   to {
-    margin-right: 0rem;
+    transform: translateY(0);
   }
 }

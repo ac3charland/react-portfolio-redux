@@ -3,11 +3,40 @@
 .bio {
     background-color: $secondary-background-color;
 
+    &__content-wrapper {
+        @include section-styling;
+        padding: 2rem 2rem 4rem;
+    }
+
+    &__heading {
+        font-size: $font-size-h3;
+        padding-bottom: 2rem;
+    }
+
     &__flex {
         display: flex;
     }
 
+    &__image-wrapper {
+        padding-right: 4rem;
+
+        @include small-screen {
+            display: none;
+        }
+    }
+
     &__image {
         width: 100%;
+    }
+
+    &__copy-wrapper {
+        p {
+            font-size: $font-size-h5;
+            padding-bottom: 2rem;
+
+            @include small-screen {
+                font-size: $font-size-large;
+            }
+        }
     }
 }
