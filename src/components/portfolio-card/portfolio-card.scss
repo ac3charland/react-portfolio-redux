@@ -1,0 +1,69 @@
+@import "../../globals.scss";
+
+.card {
+    &__flex-column-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__heading {
+        font-size: $font-size-h4;
+        padding-bottom: 1rem;
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+
+        @media (max-width: 600px) {
+            height: 35vw;
+        }
+        @media (min-width: 600px) {
+            height: 17vw;
+        }
+        @media (min-width: 992px) {
+            height: 11vw;
+        }
+    }
+
+    &__description {
+        padding: 1rem 0;
+    }
+
+    &__technologies,
+    &__links {
+        display: flex;
+    }
+
+    &__technologies {
+        flex-grow: 2;
+        justify-content: space-between;
+    }
+
+    &__tech-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__links {
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    &__link-wrapper {
+        width: 25%;
+        text-align: center;
+    }
+
+    &__link {
+        .fa {
+            font-size: 4rem;
+
+            @include small-screen {
+                font-size: 3rem;
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './nav-bar.scss'
-import {SECONDARY_PAGE_URL, SITE_LOGO} from '../../utils/constants'
+import {RESUME_URL, SITE_LOGO} from '../../utils/constants'
 
 const cb = 'navbar'
 
@@ -30,7 +30,7 @@ export default class NavBar extends Component {
                 </a>
                 <div className={`${cb}__links ${menuCSS}`}>
                     <button className={`icon ${menuCSS}`} onClick={() => this.toggleMenu()}><i className={`fa ${menuIcon}`}></i></button>
-                    <a id={'secondary-link'} className={`${cb}__link ${menuCSS}`} href={SECONDARY_PAGE_URL}>CHANGE_ME SECONDARY_LINK</a>
+                    <a id={'secondary-link'} className={`${cb}__link ${menuCSS}`} href={RESUME_URL}>Resume</a>
                 </div>
             </div>
         )

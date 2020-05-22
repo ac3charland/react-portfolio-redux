@@ -1,4 +1,4 @@
-export const SECONDARY_PAGE_URL = '/secondary'
+export const RESUME_URL = '/resume'
 
 // Image URLs
 export const SITE_LOGO = 'logo512.png'
