@@ -3,11 +3,13 @@ import data from './data'
 import PortfolioCard from '../portfolio-card/portfolio-card'
 import './portfolio-carousel.scss'
 
+const cb = 'portfolio-carousel'
+
 export default class PortfolioCarousel extends Component {
-    
+
     state = {
         projects: data.projects,
-        project: data.projects[0],        
+        project: data.projects[0],
     };
 
     slideShow;
@@ -45,39 +47,41 @@ export default class PortfolioCarousel extends Component {
     }
 
     componentDidMount = () => {
-        // this.runSlideShow()
+        this.runSlideShow()
     }
 
     render() {
         const {projects, project} = this.state
         return (
-            <div id='home-portfolio'>
-                <div className='container'>
-                    <div className='row'>
-                        <div className='col s12'>
-                            <h1>Projects</h1>
-                            <div className={`cards-slider active-slide-${project.index}`} >
-                                <div className='cards-slider-wrapper' style={{
-                                    transform: `translateX(-${project.index * (100 / projects.length)}%)`,
-                                }}>
-                                    {
-                                        projects.map(project => <PortfolioCard key={project.name} project={project} />)
-                                    }
-                                </div>
+            <div id='home-portfolio' className={cb}>
+                <h2 className={`${cb}__heading`}>Projects</h2>
+                <div className={`${cb}__flex`}>
+                    <div className={`${cb}__button-wrapper ${cb}__left`}>
+                        <button
+                            className={`${cb}__button`}
+                            onClick={() => this.prevProject()}
+                        >
+                            <i className='fa fa-chevron-left'></i>
+                        </button>
+                    </div>
+                    <div className={`${cb}__slider-wrapper`}>
+                        <div className={`cards-slider active-slide-${project.index}`} >
+                            <div className='cards-slider-wrapper' style={{
+                                transform: `translateX(-${project.index * (100 / projects.length)}%)`,
+                            }}>
+                                {
+                                    projects.map(project => <PortfolioCard key={project.name} project={project} />)
+                                }
                             </div>
                         </div>
                     </div>
-                    <div className='row'>
-                        <div className='col s12 center-align'>
-                            <button 
-                                className='waves-effect waves-teal btn-flat'
-                                onClick={() => this.prevProject()}
-                            ><i className='material-icons'>arrow_back_ios</i></button>
-                            <button 
-                                className='waves-effect waves-teal btn-flat'
-                                onClick={() => this.nextProject(true)}
-                            ><i className='material-icons'>arrow_forward_ios</i></button>
-                        </div>
+                    <div className={`${cb}__button-wrapper ${cb}__right`}>
+                        <button
+                            className={`${cb}__button`}
+                            onClick={() => this.nextProject(true)}
+                        >
+                            <i className='fa fa-chevron-right'></i>
+                        </button>
                     </div>
                 </div>
             </div>

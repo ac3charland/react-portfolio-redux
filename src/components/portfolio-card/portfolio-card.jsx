@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Tech from '../Tech'
 import data from '../HomeTechs/data'
 import './portfolio-card.scss'
-import {HEADSHOT} from '../../utils/constants'
 import NewWindowScreenReaderWarning from '../new-window-warning/new-window-warning'
 
 const cb = 'card'

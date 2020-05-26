@@ -13,7 +13,7 @@ context('Page Navigation', () => {
 
         cy.get(NavBar.link).eq(0).click()
 
-        cy.url().should('contain', '/secondary')
+        cy.url().should('contain', '/resume')
         cy.get(SecondaryPage.wrapper)
 
         cy.get(NavBar.homeLink).click()

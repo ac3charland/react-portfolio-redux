@@ -1,6 +1,32 @@
 @import "../../globals.scss";
 
 .card {
+    border: 3px #f3f3f3 solid;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s linear;
+    background-color: #f3f3f3;
+    padding: 10px;
+    max-width: 220px;
+    text-align: left;
+    margin: 0 auto;
+    &:hover {
+        background-color: #f3f3f3;
+        border-color: #f3f3f3;
+    }
+
+    @media (max-width: 600px) {
+        min-width: 35vw;
+        height: 300px;
+    }
+    @media (min-width: 600px) {
+        min-width: 45vw;
+        height: 425px;
+    }
+    @media (min-width: 992px) {
+        min-width: 25vw;
+        height: 425px;
+    }
+
     &__flex-column-wrapper {
         display: flex;
         flex-direction: column;
@@ -34,11 +60,16 @@
     &__technologies,
     &__links {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__technologies {
         flex-grow: 2;
         justify-content: space-between;
+
+        @media (max-width: 600px) {
+            display: none;
+        }
     }
 
     &__tech-wrapper {
@@ -50,6 +81,10 @@
     &__links {
         justify-content: center;
         padding-top: 1rem;
+
+        @media (max-width: 600px) {
+            justify-content: space-around;
+        }
     }
 
     &__link-wrapper {
