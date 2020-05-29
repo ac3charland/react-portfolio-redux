@@ -1,5 +1,5 @@
 import PortfolioCard from './portfolio-card'
-import Tech from '../Tech'
+import Tech from '../tech/tech'
 
 const cb = 'card'
 
@@ -9,14 +9,23 @@ describe('PortfolioCard', () => {
     beforeEach(() => {
         props = {
             project: {
-                index: 42,
                 name: 'Your mother was a hamster and your father smelled of elderberries',
-                description: 'That sure is a long title',
-                technologies: [4, 2],
-                img: 'johncleese.jpg',
+                desc: 'That sure is a long title',
+                technologies: [
+                    {
+                        name: 'Javascript', 
+                        image: 'images/Techs/javascript.png',
+                    },
+                    {
+                        name: 'Bootstrap',
+                        image: 'images/Techs/bootstrap.png',
+                    },
+                ],
+                image: 'johncleese.jpg',
                 url: 'montypythonisthebomb.com',
-                gitHub: 'Creative github url string',
+                github: 'Creative github url string',
             },
+            id: 42,
         }
 
         render = (changedProps = {}) => mount(<PortfolioCard {...props} {...changedProps} />)

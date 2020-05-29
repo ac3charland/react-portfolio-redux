@@ -83,7 +83,7 @@
 }
 
 $i: 0;
-@for $i from 0 through 4 {
+@for $i from 0 through 5 {
     .cards-slider.active-slide-#{$i} #card-#{$i} {
         opacity: 1;
         transform: scale(1);
@@ -99,19 +99,19 @@ $i: 0;
 @media (max-width: 600px) {
     .cards-slider {
         max-width: 45vw;
-        height: 300px;
+        height: 400px;
     }
 }
 @media (min-width: 600px) {
     .cards-slider {
         max-width: 45vw;
-        height: 425px;
+        height: 450px;
     }
 }
 @media (min-width: 992px) {
     .cards-slider {
         max-width: 25vw;
-        height: 425px;
+        height: 450px;
     }
 }
 /* #endregion */

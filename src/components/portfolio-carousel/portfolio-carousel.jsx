@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import data from './data'
+import PropTypes from 'prop-types'
 import PortfolioCard from '../portfolio-card/portfolio-card'
 import './portfolio-carousel.scss'
 
@@ -8,9 +8,16 @@ const cb = 'portfolio-carousel'
 export default class PortfolioCarousel extends Component {
 
     state = {
-        projects: data.projects,
-        project: data.projects[0],
+        index: 0,
     };
+
+    static propTypes = {
+        projects: PropTypes.array,
+    }
+
+    static defaultProps = {
+        projects: [],
+    }
 
     slideShow;
 
@@ -19,25 +26,23 @@ export default class PortfolioCarousel extends Component {
         if (manual) {
             clearInterval(component.slideShow)
         }
-        let newIndex = this.state.project.index + 1
-        if (newIndex >= data.projects.length) {
+        let newIndex = this.state.index + 1
+        if (newIndex >= this.props.projects.length) {
             newIndex = 0
         }
         this.setState({
-            projects: data.projects,
-            project: data.projects[newIndex],
+            index: newIndex,
         })
     }
 
     prevProject = () => {
         clearInterval(this.slideShow)
-        let newIndex = this.state.project.index - 1
+        let newIndex = this.state.index - 1
         if (newIndex < 0) {
-            newIndex = data.projects.length - 1
+            newIndex = this.props.projects.length - 1
         }
         this.setState({
-            projects: data.projects,
-            project: data.projects[newIndex],
+            index: newIndex,
         })
     }
 
@@ -51,35 +56,28 @@ export default class PortfolioCarousel extends Component {
     }
 
     render() {
-        const {projects, project} = this.state
+        const {index} = this.state
+        const {projects} = this.props
         return (
             <div id='home-portfolio' className={cb}>
                 <h2 className={`${cb}__heading`}>Projects</h2>
                 <div className={`${cb}__flex`}>
                     <div className={`${cb}__button-wrapper ${cb}__left`}>
-                        <button
-                            className={`${cb}__button`}
-                            onClick={() => this.prevProject()}
-                        >
+                        <button className={`${cb}__button`} onClick={() => this.prevProject()}>
                             <i className='fa fa-chevron-left'></i>
                         </button>
                     </div>
                     <div className={`${cb}__slider-wrapper`}>
-                        <div className={`cards-slider active-slide-${project.index}`} >
-                            <div className='cards-slider-wrapper' style={{
-                                transform: `translateX(-${project.index * (100 / projects.length)}%)`,
-                            }}>
+                        <div className={`cards-slider active-slide-${index}`} >
+                            <div className='cards-slider-wrapper' style={{transform: `translateX(-${index * (100 / projects.length)}%)`}}>
                                 {
-                                    projects.map(project => <PortfolioCard key={project.name} project={project} />)
+                                    projects.map((project, idx) => <PortfolioCard key={idx} project={project} id={idx}/>)
                                 }
                             </div>
                         </div>
                     </div>
                     <div className={`${cb}__button-wrapper ${cb}__right`}>
-                        <button
-                            className={`${cb}__button`}
-                            onClick={() => this.nextProject(true)}
-                        >
+                        <button className={`${cb}__button`} onClick={() => this.nextProject(true)}>
                             <i className='fa fa-chevron-right'></i>
                         </button>
                     </div>
