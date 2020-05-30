@@ -1,0 +1,87 @@
+@import "../../globals.scss";
+
+.resume {
+  padding: 0 2rem;
+  @include section-styling;
+
+  p {
+    padding-bottom: 2rem;
+  }
+
+  &__normal {
+    font-size: $font-size-h6;
+    font-weight: normal;
+
+    @include small-screen {
+      font-size: $font-size-large;
+    }
+  }
+
+  &__large {
+    font-size: $font-size-h2;
+    padding-bottom: 2rem;
+
+    @include small-screen {
+      font-size: $font-size-h3;
+    }
+  }
+
+  &__extra-large {
+    font-size: $font-size-h1;
+    padding-bottom: 2rem;
+
+    @include small-screen {
+      font-size: $font-size-h2;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80rem;
+    margin: 4rem auto 8rem;
+  }
+
+  &__button {
+    flex: 1;
+    @include link-button-styling;
+
+    &:last-child {
+      margin-left: 10rem;
+
+      @include small-screen {
+        margin-left: 2rem;
+      }
+    }
+
+    @include small-screen {
+      font-size: $font-size-large;
+    }
+  }
+
+  &__download-button {
+    @include link-button-styling;
+    max-width: 37rem;
+
+    @include small-screen {
+      max-width: 27rem;
+    }
+  }
+
+  &__questions {
+    list-style: none;
+  }
+
+  &__question {
+    padding-bottom: 2rem;
+  }
+
+  &__question-heading {
+    font-size: $font-size-h4;
+    padding-bottom: 0.5rem;
+
+    @include small-screen {
+      font-size: $font-size-h6;
+    }
+  }
+}

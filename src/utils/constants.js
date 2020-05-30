@@ -1,9 +1,23 @@
+export const ROOT_URL = '/'
 export const RESUME_URL = '/resume'
+
+// Section IDs
+export const PROJECTS_ID = 'projects-heading'
+export const TECHNOLOGIES_ID = 'technologies-heading'
+export const CONTACT_ID = 'contact-heading'
+export const RESUME_ID = 'resume-heading'
 
 // External URLs
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/alex-charland/'
 export const GITHUB_PROFILE_URL = 'https://github.com/ac3charland'
-export const EMAIL_URL = 'mailto:ac3charland@gmail.com'
+export const EMAIL_URL = 'https://tinyurl.com/y8nas45z'
+export const BASH_PROFILE_URL = 'https://github.com/ac3charland/BashProfile'
+export const READGEEK_SCRAPER_URL = 'https://github.com/ac3charland/ReadGeekScraper'
+export const RESUME_DOWNLOAD_URL = 'https://tinyurl.com/yc8h9fx3'
+export const BEST_BUY_URL = 'https://www.bestbuy.com/'
+export const SWIFT_URL = 'https://developer.apple.com/swift/'
+export const BOOTCAMP_URL = 'https://bootcamp.umn.edu/coding/'
+export const MUSIC_URL = 'https://alexfranzen.bandcamp.com/'
 
 // Image URLs
 export const SITE_LOGO = 'logo512.png'
@@ -107,7 +121,7 @@ export const FRANSEN_FAMILY_JOURNAL = new Project(
 
 export const SHREDDIT = new Project(
     'Shreddit',
-    'A full-stack MERN application that allows users to create short melodies in a grid-based sequencer. This app was the capstone project of my time at the University of Minnesota\'s web development bootcamp.',
+    'A full-stack MERN application that allows users to create short melodies in a grid-based sequencer. This app was my capstone project at the University of Minnesota web development bootcamp.',
     [MONGODB, REACT, NODE],
     SHREDDIT_IMAGE,
     'https://shredditmern.herokuapp.com/',
