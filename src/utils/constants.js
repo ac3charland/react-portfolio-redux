@@ -1,5 +1,10 @@
 export const RESUME_URL = '/resume'
 
+// External URLs
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/alex-charland/'
+export const GITHUB_PROFILE_URL = 'https://github.com/ac3charland'
+export const EMAIL_URL = 'mailto:ac3charland@gmail.com'
+
 // Image URLs
 export const SITE_LOGO = 'logo512.png'
 export const HEADSHOT = 'headshot.jpg'

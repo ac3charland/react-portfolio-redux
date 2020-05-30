@@ -7,6 +7,7 @@ import Landing from '../../components/landing/landing'
 import Bio from '../../components/bio/bio'
 import PortfolioCarousel from '../../components/portfolio-carousel/portfolio-carousel'
 import Technologies from '../../components/technologies/technologies'
+import Contact from '../../components/contact/contact'
 import {DISPLAY_PROJECTS, DISPLAY_TECHNOLOGIES} from '../../utils/constants'
  
 const cb = 'home'
@@ -33,6 +34,7 @@ export default class HomePage extends Component {
                 <Bio/>
                 <PortfolioCarousel projects={DISPLAY_PROJECTS}/>
                 <Technologies techs={DISPLAY_TECHNOLOGIES}/>
+                <Contact/>
             </div>
         )
     }

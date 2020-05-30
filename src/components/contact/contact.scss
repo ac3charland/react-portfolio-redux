@@ -1,0 +1,15 @@
+@import '../../globals.scss';
+
+.contact {
+    @include section-styling;
+    padding: 2rem;
+
+    &__heading {
+        font-size: $font-size-h3;
+    }
+
+    &__buttons-wrapper {
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+}

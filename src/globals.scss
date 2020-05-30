@@ -25,7 +25,7 @@ $initial-offscreen-position: translateX(100rem);
 // Cross-browser animation mixins from https://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
 @mixin animation($animate...) {
     $max: length($animate);
-    $animations: '';
+    $animations: "";
 
     @for $i from 1 through $max {
         $animations: #{$animations + nth($animate, $i)};
@@ -35,9 +35,9 @@ $initial-offscreen-position: translateX(100rem);
         }
     }
     -webkit-animation: $animations;
-    -moz-animation:    $animations;
-    -o-animation:      $animations;
-    animation:         $animations;
+    -moz-animation: $animations;
+    -o-animation: $animations;
+    animation: $animations;
 }
 
 @mixin keyframes($animationName) {
@@ -52,7 +52,7 @@ $initial-offscreen-position: translateX(100rem);
     }
 }
 
- @mixin scale($factor) {
+@mixin scale($factor) {
     -webkit-transform: scale($factor);
     -moz-transform: scale($factor);
     -ms-transform: scale($factor);
@@ -61,11 +61,11 @@ $initial-offscreen-position: translateX(100rem);
 }
 
 @mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
 }
 
 @mixin section-styling {
@@ -91,10 +91,21 @@ $initial-offscreen-position: translateX(100rem);
 }
 
 @include keyframes(slideInFromRight) {
-  from {
-    transform: $initial-offscreen-position;
-  }
-  to {
-    transform: translateY(0);
-  }
+    from {
+        transform: $initial-offscreen-position;
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@include keyframes(fadeIn) {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
