@@ -21,12 +21,12 @@
   
   &__heading {
     font-size: $font-size-h2;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
   }
 
   &__subheading {
     font-size: $font-size-h4;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 
     @include small-screen {
       max-width: 32.5rem;
@@ -40,6 +40,6 @@
     opacity: 0;
 
     @include animation("fadeIn 0.5s forwards");
-    animation-delay: 3s;
+    animation-delay: 2.5s;
   }
 }

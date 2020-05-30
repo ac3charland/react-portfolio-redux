@@ -1,6 +1,10 @@
 @import "../../globals.scss";
 
 .contact-buttons {
+    $color: $link-color;
+    $hover-color: $link-hover-color;
+    $diameter: 5rem;
+
     &__flex-wrapper {
         display: flex;
         justify-content: space-between;
@@ -11,24 +15,23 @@
         &:focus,
         &:hover {
             .contact-buttons__button-wrapper {
-                color: $link-hover-color;
-                border-color: $link-hover-color;
+                color: $hover-color;
+                border-color: $hover-color;
                 @include scale(1.1);
             }
         }
 
         &-wrapper {
-            border: 0.3rem solid black;
-            border-radius: 50%;
-            padding: 1.5rem;
-            $diameter: 5rem;
-            width: $diameter;
-            height: $diameter;
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            color: black;
+            color: $color;
+            border: 0.3rem solid $color;
+            border-radius: 50%;
+            padding: 1.5rem;
+            width: $diameter;
+            height: $diameter;
             @include transition(all 0.2s);
 
             i {

@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './contact-buttons.scss'
 import {LINKEDIN_URL, GITHUB_PROFILE_URL, EMAIL_URL} from '../../utils/constants'
-import NewWindowScreenReaderWarning from '../new-window-warning/new-window-warning'
 
 const cb = 'contact-buttons'
 
@@ -12,12 +11,12 @@ const ContactButtons = () => (
             <ContactButton
                 href={LINKEDIN_URL}
                 icon='fa-linkedin-square'
-                srMessage='Link to LinkedIn Profile (Opens a new window)'
+                srMessage='Link to LinkedIn Profile'
             />
             <ContactButton
                 href={GITHUB_PROFILE_URL}
                 icon='fa-github-square'
-                srMessage='Link to Github Profile (Opens a new window)'
+                srMessage='Link to Github Profile'
             />
             <ContactButton
                 href={EMAIL_URL}
@@ -29,10 +28,10 @@ const ContactButtons = () => (
 )
 
 const ContactButton = ({href, icon, srMessage}) => (
-    <a className={`${cb}__button`} href={href} target={href === EMAIL_URL ? '_self' : '_blank'} rel='noreferrer'>
+    <a className={`${cb}__button`} href={href}>
         <div className={`${cb}__button-wrapper`}>
             <i className={`fa ${icon}`} aria-hidden='true'></i>
-            <NewWindowScreenReaderWarning customMessage={srMessage} />
+            <span className='sr-only'>{srMessage}</span>
         </div>
     </a>
 )
