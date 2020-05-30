@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import PortfolioCard from '../portfolio-card/portfolio-card'
 import './portfolio-carousel.scss'
+import {PROJECTS_ID} from '../../utils/constants'
+import PortfolioCard from '../portfolio-card/portfolio-card'
 
 const cb = 'portfolio-carousel'
 
@@ -59,8 +60,8 @@ export default class PortfolioCarousel extends Component {
         const {index} = this.state
         const {projects} = this.props
         return (
-            <div id='home-portfolio' className={cb}>
-                <h2 className={`${cb}__heading`}>Projects</h2>
+            <div className={cb}>
+                <h2 id={PROJECTS_ID} className={`${cb}__heading`} tabIndex='-1'>Projects</h2>
                 <div className={`${cb}__flex`}>
                     <div className={`${cb}__button-wrapper ${cb}__left`}>
                         <button className={`${cb}__button`} onClick={() => this.prevProject()}>

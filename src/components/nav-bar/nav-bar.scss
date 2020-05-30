@@ -1,21 +1,31 @@
 @import "../../globals.scss";
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 4rem;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
   background-color: $secondary-background-color;
   z-index: 2;
 
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    @include section-styling;
+  }
+
+  &__home:focus {
+    .navbar__logo {
+      @include scale(1.2);
+    }
+  }
+
   &__logo {
     max-height: 4rem;
     @include transition(transform 0.3s);
 
     &:hover {
-      @include scale(1.2)
+      @include scale(1.2);
     }
   }
 
@@ -26,12 +36,20 @@
 
   &__links {
     display: flex;
+    align-items: baseline;
   }
 
   &__link {
     padding: 0.5rem 0;
     margin-left: 3rem;
     font-size: $font-size-large;
+    text-decoration: underline;
+    color: $link-color;
+    font-size: $font-size-h5;
+
+    &:hover {
+      color: $link-hover-color;
+    }
   }
 
   .icon {

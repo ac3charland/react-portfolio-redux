@@ -7,8 +7,8 @@ import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import NavBar from './components/nav-bar/nav-bar'
 import Footer from './components/footer/footer'
 import {ConnectedHomePage} from './pages/home-page/home-page'
-import SecondaryPage from './pages/secondary-page/secondary-page'
-import {RESUME_URL} from './utils/constants'
+import ResumePage from './pages/resume-page/resume-page'
+import {RESUME_URL, ROOT_URL} from './utils/constants'
 import makeStore from './store'
 
 const store = makeStore()
@@ -22,8 +22,9 @@ ReactDOM.render(
             <NavBar />
             <div className='page-wrapper'>
               <Switch>
-                <Route exact path='/' component={ConnectedHomePage} />
-                <Route exact path={RESUME_URL} component={SecondaryPage} />
+                <Route exact path={ROOT_URL} component={ConnectedHomePage} />
+                <Route exact path={RESUME_URL} component={ResumePage} />
+                <Route component={ConnectedHomePage} />
               </Switch>
             </div>
             <Footer />

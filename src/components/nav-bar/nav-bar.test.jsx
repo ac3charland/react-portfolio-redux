@@ -15,13 +15,13 @@ describe('NavBar', () => {
         const component = render()
         expect(component.find(`.${cb}`).length).toEqual(1)
         expect(component.find(`.${cb}__home`).prop('href')).toEqual('/')
-        expect(component.find(`.${cb}__link`).prop('href')).toEqual('/resume')
+        expect(component.find(`.${cb}__link`).at(0).prop('href')).toEqual('/resume')
     })
 
     it('toggles between open and closed', () => {
         const component = render()
 
-        expect(component.find('button.closed').length).toEqual(1)
+        expect(component.find('button.closed').length).toEqual(4)
         expect(component.find('button.open').length).toEqual(0)
         expect(component.find('.fa-bars').length).toEqual(1)
         expect(component.find('.fa-times').length).toEqual(0)
@@ -29,7 +29,7 @@ describe('NavBar', () => {
         component.find('.icon').simulate('click')
         
         expect(component.find('button.closed').length).toEqual(0)
-        expect(component.find('button.open').length).toEqual(1)
+        expect(component.find('button.open').length).toEqual(4)
         expect(component.find('.fa-bars').length).toEqual(0)
         expect(component.find('.fa-times').length).toEqual(1)
     })

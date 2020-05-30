@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Tech from '../tech/tech'
 import './technologies.scss'
+import {TECHNOLOGIES_ID} from '../../utils/constants'
 
 const cb = 'technologies'
 
@@ -40,7 +41,7 @@ export default class Technologies extends Component {
         return (
             <div className={cb}>
                 <div className={`${cb}__content-wrapper`}>
-                    <h1 className={`${cb}__heading`}>Skills & Technologies</h1>
+                    <h2 id={TECHNOLOGIES_ID} className={`${cb}__heading`} tabIndex='-1'>Skills & Technologies</h2>
                     <div className={`${cb}__techs-wrapper techs-container active-card-${selectedTech}`}>
                         {techs.map((tech, idx) => (
                             <div key={`tech-${idx}`} className={`${cb}__tech-wrapper`}>

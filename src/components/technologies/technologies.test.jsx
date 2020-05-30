@@ -20,6 +20,7 @@ describe('Technologies', () => {
     it('renders and displays its technologies', () => {
         const component = render()
         expect(component.find(`.${cb}`).length).toEqual(1)
+        expect(component.find(`#technologies-heading`).prop('tabIndex')).toEqual('-1')
         expect(component.find(`.${cb}__tech-wrapper`).length).toEqual(2)
         expect(component.find(Tech).at(0).prop('index')).toEqual(0)
         expect(component.find(Tech).at(0).prop('name')).toEqual('Malbolge')
