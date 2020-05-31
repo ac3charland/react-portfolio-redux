@@ -4,16 +4,16 @@ Nope. This app is a do-over of a [React-based portfolio site](https://github.com
 
 
 ## To Develop:
-- Install packages: `yarn`
-- Start app: `yarn start`
-- Start app in background using `pm2`: `yarn start-background`
-- Kill background app process: `yarn kill-background`
-- Run all tests (unit, visual, integration, and lint): `yarn test`
-- Run CI-only tests (all except visual): `yarn test:ci`
-- Run unit tests: `yarn jest`
-- Run lint: `yarn lint`
-- Run visual regression tests: `yarn backstop:test`
-- Open integration tests: `yarn cypress:open`
+- Install packages: `npm i`
+- Start app: `npm start`
+- Start app in background using `pm2`: `npm run start-background`
+- Kill background app process: `npm run kill-background`
+- Run all tests (unit, visual, integration, and lint): `npm run test`
+- Run CI-only tests (all except visual): `npm run test:ci`
+- Run unit tests: `npm run jest`
+- Run lint: `npm run lint`
+- Run visual regression tests: `npm run backstop:test`
+- Open integration tests: `npm run cypress:open`
 
 ## Project Structure
 The app's JSX files are categorized into pages and components. The app's overall styles are set in `index.scss` and its style constants are defined in `globals.scss`. Each `.scss` file should import `globals.scss`.
@@ -21,7 +21,7 @@ The app's JSX files are categorized into pages and components. The app's overall
 ## Technologies
 0. **UI Framework**: [React](https://reactjs.org/) (using Create React App)
 0. **State Manager**: [Redux](https://redux.js.org/)
-0. **Package Manager**: [Yarn](https://yarnpkg.com/)
+0. **Package Manager**: [NPM](https://www.npmjs.com/)
 0. **Routing**: [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
 0. **CSS Processor**: [SASS](https://sass-lang.com/)
 
