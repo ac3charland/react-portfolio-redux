@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './nav-bar.scss'
-import {RESUME_URL, SITE_LOGO, PROJECTS_ID, CONTACT_ID, TECHNOLOGIES_ID, ROOT_URL} from '../../utils/constants'
+import Logo from './logo512.png'
+import {RESUME_URL, PROJECTS_ID, CONTACT_ID, TECHNOLOGIES_ID, ROOT_URL} from '../../utils/constants'
 
 const cb = 'navbar'
 
@@ -27,7 +28,7 @@ export default class NavBar extends Component {
             <div className={cb}>
                 <div className={`${cb}__content-wrapper`}>
                     <a className={`${cb}__home`} href='/'>
-                        <img className={`${cb}__logo`} src={SITE_LOGO} alt='Alex Charland Frontend Web Developer Site Logo' />
+                        <img className={`${cb}__logo`} src={Logo} alt='Alex Charland Frontend Web Developer Site Logo' />
                     </a>
                     <div className={`${cb}__links ${menuCSS}`}>
                         <button className={`icon ${menuCSS}`} onClick={() => this.toggleMenu()}><i className={`fa ${menuIcon}`}></i></button>
