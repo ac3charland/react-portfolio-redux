@@ -25,7 +25,7 @@ export default class ResumePage extends Component {
                     <a className={`${cb}__button`} href={ROOT_URL}><strong>Explore my portfolio</strong></a>
                     <a className={`${cb}__button`} href={GITHUB_PROFILE_URL}><strong>Browse my Github </strong></a>
                 </div>
-                <h2 className={`${cb}__normal`}>Why? Because these resources are better at answering questions like:</h2>
+                <h2 className={`${cb}__normal ${cb}__body-font`}>Why? Because these resources are better at answering questions like:</h2>
                 <ul className={`${cb}__questions`}>
                     <li className={`${cb}__question`}>
                         <h3 className={`${cb}__question-heading`}>What technologies does he know? How well does he know them?</h3>

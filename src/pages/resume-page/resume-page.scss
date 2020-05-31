@@ -35,6 +35,10 @@
     }
   }
 
+  &__body-font {
+    font-family: $body-font;
+  }
+
   &__button-wrapper {
     display: flex;
     justify-content: space-between;
@@ -45,6 +49,7 @@
   &__button {
     flex: 1;
     @include link-button-styling;
+    font-family: $heading-font;
 
     &:last-child {
       margin-left: 10rem;
@@ -61,6 +66,7 @@
 
   &__download-button {
     @include link-button-styling;
+    font-family: $heading-font;
     max-width: 37rem;
 
     @include small-screen {

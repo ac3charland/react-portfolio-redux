@@ -1,8 +1,13 @@
 @import "../../globals.scss";
 
 .landing {
-  @include section-styling;
-  padding: 0 2rem;
+  // background-color: $primary-lightest;
+  // @include background-animation;
+
+  &__content-wrapper {
+    @include section-styling;
+    padding: 0 2rem;
+  }
 
   &__title-wrapper {
     padding: 45rem 0 4rem;
@@ -18,7 +23,7 @@
     transform: $initial-offscreen-position;
     @include animation("slideInFromRight .5s forwards");
   }
-  
+
   &__heading {
     font-size: $font-size-h2;
     animation-delay: 0.5s;

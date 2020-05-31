@@ -10,14 +10,40 @@ $font-size-large: 1.5rem;
 $font-size-normal: 1.3rem;
 $font-size-small: 1.1rem;
 
-$secondary-background-color: lightgray;
-$link-color: navy;
-$link-hover-color: rgb(114, 114, 241);
+$primary-color: #092d8e;
+$primary-darkest: #141e3d;
+$primary-darker: #041a55;
+$primary-lighter: #5985ff;
+$primary-lightest: #deecff;
+
+$secondary-lightest: #ffeca8;
+$tertiary-lightest: #ffd9a8;
+$off-white: #fffdf9;
+
+$secondary-background-color: $primary-lightest;
+$link-color: $primary-color;
+$link-hover-color: $primary-lighter;
+
+$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+$heading-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 
 $initial-offscreen-position: translateX(100rem);
 
 @mixin small-screen {
     @media (max-width: 700px) {
+        @content;
+    }
+}
+
+@mixin headings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @content;
     }
 }
@@ -86,8 +112,8 @@ $initial-offscreen-position: translateX(100rem);
 
     &:focus,
     &:hover {
-      color: white;
-      background-color: $link-color;
+        color: white;
+        background-color: $link-color;
     }
 }
 
@@ -126,4 +152,32 @@ $initial-offscreen-position: translateX(100rem);
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@include keyframes(backgroundColorLoop) {
+    0% {
+        background-color: $primary-lightest;
+    }
+    28% {
+        background-color: $primary-lightest;
+    }
+    33% {
+        background-color: $tertiary-lightest;
+    }
+    61% {
+        background-color: $tertiary-lightest;
+    }
+    66% {
+        background-color: $secondary-lightest;
+    }
+    94% {
+        background-color: $secondary-lightest;
+    }
+    100% {
+        background-color: $primary-lightest;
+    }
+}
+
+@mixin background-animation {
+    @include animation("backgroundColorLoop 12s infinite");
 }

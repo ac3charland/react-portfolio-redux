@@ -4,7 +4,7 @@
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-  background-color: $secondary-background-color;
+  background-color: $primary-lightest;
   z-index: 2;
 
   &__content-wrapper {
@@ -46,7 +46,11 @@
     text-decoration: underline;
     color: $link-color;
     font-size: $font-size-h5;
+    font-family: $heading-font;
+    text-decoration: none;
+    @include transition(color 0.3s);
 
+    &:focus,
     &:hover {
       color: $link-hover-color;
     }
