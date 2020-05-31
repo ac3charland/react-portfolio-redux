@@ -45,7 +45,8 @@ p {
 
 a {
   color: $link-color;
-
+  
+  &:focus,
   &:hover {
     color: $link-hover-color;
   }

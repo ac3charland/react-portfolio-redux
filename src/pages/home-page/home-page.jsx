@@ -21,6 +21,7 @@ export default class HomePage extends Component {
 
     componentDidMount() {
         this.props.markAsVisited()
+        scrollToElement()
     }
 
     render() {
@@ -39,6 +40,17 @@ export default class HomePage extends Component {
         )
     }
 
+}
+
+const scrollToElement = () => {
+    const id = window.location.hash
+    const e = document.getElementById(id)
+    if (e) {
+        e.scrollIntoView({
+            behavior: 'smooth',
+        })
+        setTimeout(() => e.focus(), 1000)
+    }
 }
 
 export const mapStateToProps = state => ({

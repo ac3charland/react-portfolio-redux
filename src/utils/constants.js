@@ -2,9 +2,9 @@ export const ROOT_URL = '/'
 export const RESUME_URL = '/resume'
 
 // Section IDs
-export const PROJECTS_ID = 'projects-heading'
-export const TECHNOLOGIES_ID = 'technologies-heading'
-export const CONTACT_ID = 'contact-heading'
+export const PROJECTS_ID = 'projects'
+export const TECHNOLOGIES_ID = 'technologies'
+export const CONTACT_ID = 'contact'
 export const RESUME_ID = 'resume-heading'
 
 // External URLs

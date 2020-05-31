@@ -1,8 +1,8 @@
 const HomePage = {
     wrapper: '.home',
-    projectsHeading: '#projects-heading',
-    technologiesHeading: '#technologies-heading',
-    contactHeading: '#contact-heading',
+    projectsHeading: '#projects',
+    technologiesHeading: '#technologies',
+    contactHeading: '#contact',
 }
 
 export default HomePage

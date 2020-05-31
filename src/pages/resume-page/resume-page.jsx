@@ -16,8 +16,7 @@ export default class ResumePage extends Component {
     render() {
         return (
             <div className={cb}>
-                <span className='sr-only'><h1 id={RESUME_ID} tabIndex='-1'>Resume</h1></span>
-                <h2 className={`${cb}__large`}>So here's the thing...</h2>
+                <h1 className={`${cb}__large`} id={RESUME_ID} tabIndex='-1'>Here's the thing...</h1>
                 <p className={`${cb}__normal`}>You’re here because you want my resume, and you’re more than welcome to it&mdash;just click the download button below.</p>
                 <h2 className={`${cb}__extra-large`}>But...</h2>
                 <p className={`${cb}__normal`}>Many of the questions you want my resume to answer will probably be better answered if you:</p>

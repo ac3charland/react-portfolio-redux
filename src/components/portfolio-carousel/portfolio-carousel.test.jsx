@@ -20,7 +20,7 @@ describe('PortfolioCarousel', () => {
     it('renders and displays its projects', () => {
         const component = render()
         expect(component.find(`.${cb}`).length).toEqual(1)
-        expect(component.find(`#projects-heading`).prop('tabIndex')).toEqual('-1')
+        expect(component.find(`#projects`).prop('tabIndex')).toEqual('-1')
         expect(component.find(PortfolioCard).length).toEqual(2)
         expect(component.find(PortfolioCard).at(0).prop('id')).toEqual(0)
         expect(component.find(PortfolioCard).at(0).prop('project')).toEqual({a: 'b'})
