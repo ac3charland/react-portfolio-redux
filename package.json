@@ -1,6 +1,6 @@
 {
   "name": "react-portfolio-redux",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "dependencies": {
     "moment": "^2.25.3",
@@ -27,11 +27,11 @@
     "backstop:approve": "sh backstop/run-backstop.sh approve",
     "cypress:open": "sh cypress/run-cypress.sh case:open",
     "cypress:test": "sh cypress/run-cypress.sh",
-    "test:ci": "yarn run jest && yarn run lint && yarn run cypress:test",
-    "test": "yarn run backstop:test && yarn run test:ci",
-    "major": "yarn version --major",
-    "minor": "yarn version --minor",
-    "patch": "yarn version --patch"
+    "test:ci": "npm run jest && npm run lint && npm run cypress:test",
+    "test": "npm run backstop:test && npm run test:ci",
+    "major": "npm version major -m 'Bump to %s'",
+    "minor": "npm version minor -m 'Bump to %s'",
+    "patch": "npm version patch -m 'Bump to %s'"
   },
   "eslintConfig": {
     "extends": "react-app"

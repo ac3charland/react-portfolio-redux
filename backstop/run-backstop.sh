@@ -2,12 +2,12 @@
 
 testExitCode=0
 
-yarn run start-background
+npm run start-background
 
 pkill -f "(chrome)?(--headless)"
 backstop $1 --config=backstop/scenarios.js --filter=$2
 testExitCode=$(($testExitCode + $?))
-yarn run kill-background
+npm run kill-background
 
 if [ "$testExitCode" -ne "0" ]; then
     echo "\n***************************************************"

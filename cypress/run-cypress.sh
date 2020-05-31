@@ -2,7 +2,7 @@
 
 testExitCode=0
 
-yarn run start-background
+npm run start-background
 
 case "$1" in
     case:open)
@@ -14,7 +14,7 @@ case "$1" in
 esac
 
 testExitCode=$(($testExitCode + $?))
-yarn run kill-background
+npm run kill-background
 
 if [ "$testExitCode" -ne "0" ]; then
     echo "\n***************************************************"
