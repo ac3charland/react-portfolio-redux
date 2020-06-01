@@ -17,11 +17,6 @@
             .contact-buttons__button-wrapper {
                 color: $hover-color;
                 border-color: $hover-color;
-
-                &.dark {
-                    color: $primary-color;
-                    border-color: $primary-color;
-                }
                 @include scale(1.1);
             }
         }
@@ -38,11 +33,6 @@
             width: $diameter;
             height: $diameter;
             @include transition(all 0.2s);
-
-            &.dark {
-                color: $primary-lighter;
-                border-color: $primary-lighter;
-            }
 
             i {
                 font-size: 6rem;
