@@ -5,27 +5,34 @@ import {LINKEDIN_URL, GITHUB_PROFILE_URL, EMAIL_URL} from '../../utils/constants
 
 const cb = 'contact-buttons'
 
-const ContactButtons = () => (
-    <div className={cb}>
-        <div className={`${cb}__flex-wrapper`}>
-            <ContactButton
-                href={LINKEDIN_URL}
-                icon='fa-linkedin-square'
-                srMessage='Link to LinkedIn Profile'
-            />
-            <ContactButton
-                href={GITHUB_PROFILE_URL}
-                icon='fa-github-square'
-                srMessage='Link to Github Profile'
-            />
-            <ContactButton
-                href={EMAIL_URL}
-                icon='fa-envelope'
-                srMessage='Send an email (Opens a new window)'
-            />
+const ContactButtons = ({darkMode}) => {
+    const darkCSS = darkMode ? 'dark' : ''
+    return (
+        <div className={`${cb} ${darkCSS}`}>
+            <div className={`${cb}__flex-wrapper`}>
+                <ContactButton
+                    href={LINKEDIN_URL}
+                    icon='fa-linkedin-square'
+                    srMessage='Link to LinkedIn Profile'
+                />
+                <ContactButton
+                    href={GITHUB_PROFILE_URL}
+                    icon='fa-github-square'
+                    srMessage='Link to Github Profile'
+                />
+                <ContactButton
+                    href={EMAIL_URL}
+                    icon='fa-envelope'
+                    srMessage='Send an email (Opens a new window)'
+                />
+            </div>
         </div>
-    </div>
-)
+    )
+}
+
+ContactButtons.propTypes = {
+    darkMode: PropTypes.bool,
+}
 
 const ContactButton = ({href, icon, srMessage}) => (
     <a className={`${cb}__button`} href={href}>

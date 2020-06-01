@@ -14,6 +14,7 @@ describe('ContactButtons', () => {
     it('renders without crashing', () => {
         const component = render()
         expect(component.find(`.${cb}`).length).toEqual(1)
+        expect(component.find(`.dark`).length).toEqual(0)
 
         expect(component.find(`.${cb}__button`).at(0).prop('href')).toEqual('https://www.linkedin.com/in/alex-charland/')
         expect(component.find(`.${cb}__button`).at(0).text()).toEqual('Link to LinkedIn Profile')
@@ -26,5 +27,12 @@ describe('ContactButtons', () => {
         expect(component.find(`.${cb}__button`).at(2).prop('href')).toEqual('https://tinyurl.com/y8nas45z')
         expect(component.find(`.${cb}__button`).at(2).text()).toEqual('Send an email (Opens a new window)')
         expect(component.find(`.fa-envelope`).prop('aria-hidden')).toEqual('true')
+    })
+
+    it('applies darkmode styling', () => {
+        props.darkMode = true
+        const component = render()
+        expect(component.find(`.${cb}`).length).toEqual(1)
+        expect(component.find(`.dark`).length).toEqual(1)
     })
 })

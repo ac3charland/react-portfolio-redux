@@ -17,6 +17,11 @@
             .contact-buttons__button-wrapper {
                 color: $hover-color;
                 border-color: $hover-color;
+
+                &.dark {
+                    color: $primary-color;
+                    border-color: $primary-color;
+                }
                 @include scale(1.1);
             }
         }
@@ -34,11 +39,32 @@
             height: $diameter;
             @include transition(all 0.2s);
 
+            &.dark {
+                color: $primary-lighter;
+                border-color: $primary-lighter;
+            }
+
             i {
                 font-size: 6rem;
                 &.fa-envelope {
                     font-size: 4.5rem;
                 }
+            }
+        }
+    }
+
+    &.dark {
+        .contact-buttons__button {
+            &:focus,
+            &:hover {
+                .contact-buttons__button-wrapper {
+                    color: $primary-lighter;
+                    border-color: $primary-lighter;
+                }
+            }
+            &-wrapper {
+                color: $off-white;
+                border-color: $off-white;
             }
         }
     }
