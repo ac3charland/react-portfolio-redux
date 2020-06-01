@@ -1,8 +1,12 @@
 @import "../../globals.scss";
 
 .resume {
-  padding: 0 2rem;
+  padding: 2rem 2rem 0;
   @include section-styling;
+
+  @include small-screen {
+    padding-top: 1rem;
+  }
 
   p {
     padding-bottom: 2rem;

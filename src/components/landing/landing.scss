@@ -3,16 +3,26 @@
 .landing {
   // background-color: $primary-lightest;
   // @include background-animation;
+  background-image: url("./landing-image.jpg");
+  background-size: cover;
+  color: $off-white;
+  box-sizing: border-box;
+  
+  &__background-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
 
+    @include small-screen {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  
   &__content-wrapper {
     @include section-styling;
-    padding: 0 2rem;
   }
 
   &__title-wrapper {
-    padding: 45rem 0 4rem;
+    padding: 45rem 2rem 4rem;
     text-align: right;
-
     @include small-screen {
       padding-top: 35rem;
       min-height: 10.5rem;

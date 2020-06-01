@@ -42,4 +42,20 @@
             }
         }
     }
+
+    &.dark {
+        .contact-buttons__button {
+            &:focus,
+            &:hover {
+                .contact-buttons__button-wrapper {
+                    color: $primary-lighter;
+                    border-color: $primary-lighter;
+                }
+            }
+            &-wrapper {
+                color: $off-white;
+                border-color: $off-white;
+            }
+        }
+    }
 }
