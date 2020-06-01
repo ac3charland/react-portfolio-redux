@@ -165,9 +165,9 @@ export const TEMPLATE_APP = new Project(
 )
 
 export const DISPLAY_PROJECTS = [
-    WAFFLE_TIMER, 
     CHARLANDS_WED, 
     EWIPATCHES,
+    WAFFLE_TIMER, 
     SHREDDIT,
     FRANSEN_FAMILY_JOURNAL,
     TEMPLATE_APP,
