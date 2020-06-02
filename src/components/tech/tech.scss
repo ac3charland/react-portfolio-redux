@@ -3,9 +3,20 @@
 .tech {
     text-align: center;
 
+    a {
+        outline-style: none;
+        text-decoration: none;
+        color: black;
+
+        @include small-screen {
+            color: $primary-color;
+            text-decoration: underline;
+        }
+    }
+
     &__title {
         display: none;
-        padding-top: 0.5rem;
+        padding: 0.5rem 1rem;
     }
 
     &__image-wrapper {

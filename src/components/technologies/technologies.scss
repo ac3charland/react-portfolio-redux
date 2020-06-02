@@ -39,6 +39,15 @@
         &__title {
             display: block;
             visibility: hidden;
+            @include small-screen {
+                visibility: visible;
+                padding-bottom: 2rem;
+            }
+        }
+
+        @include small-screen {
+            opacity: 1;
+            transform: scale(1);
         }
     }
 }
@@ -51,6 +60,11 @@
         &__title {
             display: block;
             visibility: hidden;
+
+            @include small-screen {
+                visibility: visible;
+                padding-bottom: 2rem;
+            }
         }
     }
 }
