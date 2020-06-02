@@ -23,21 +23,31 @@ export default class Technologies extends Component {
         techs: [],
     }
 
+    reset;
+
     techEnter = (id) => {
-        this.setState({
-            selectedTech: id,
-        })
+        clearTimeout(this.reset)
+        this.setState(
+            {selectedTech: id},
+            () => {
+                const element = document.getElementById(`tech-wrapper-${this.state.selectedTech}`)
+                if (element) {
+                    const link = element.getElementsByTagName('A')[0]
+                    if (link) {
+                        link.focus()
+                    }
+                }
+            })
     }
 
     techLeave = () => {
-        this.setState({
-            selectedTech: 'none',
-        })
+        this.reset = setTimeout(() => this.setState({selectedTech: 'none'}), 500)
     }
 
     render() {
         const {selectedTech} = this.state
         const {techs} = this.props
+
         return (
             <div className={cb}>
                 <div className={`${cb}__content-wrapper`}>
@@ -48,7 +58,8 @@ export default class Technologies extends Component {
                                 <Tech
                                     index={idx}
                                     name={tech.name}
-                                    url={tech.image}
+                                    image={tech.image}
+                                    url={tech.url}
                                     size='tech-normal'
                                     onMouseEnter={() => this.techEnter(idx)}
                                     onMouseLeave={this.techLeave}

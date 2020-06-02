@@ -9,8 +9,8 @@ describe('Technologies', () => {
     beforeEach(() => {
         props = {
             techs: [
-                {name: 'Malbolge', image: 'https://en.wikipedia.org/wiki/Malbolge'},
-                {name: 'LOLCODE', image: 'https://en.wikipedia.org/wiki/LOLCODE'},
+                {name: 'Malbolge', image: 'malboge.wtf', url: 'https://en.wikipedia.org/wiki/Malbolge'},
+                {name: 'LOLCODE', image: 'lolcat.jpg', url: 'https://en.wikipedia.org/wiki/LOLCODE'},
             ],
         }
 
@@ -25,9 +25,11 @@ describe('Technologies', () => {
         expect(component.find(Tech).at(0).prop('index')).toEqual(0)
         expect(component.find(Tech).at(0).prop('name')).toEqual('Malbolge')
         expect(component.find(Tech).at(0).prop('url')).toEqual('https://en.wikipedia.org/wiki/Malbolge')
+        expect(component.find(Tech).at(0).prop('image')).toEqual('malboge.wtf')
         expect(component.find(Tech).at(1).prop('index')).toEqual(1)
         expect(component.find(Tech).at(1).prop('name')).toEqual('LOLCODE')
         expect(component.find(Tech).at(1).prop('url')).toEqual('https://en.wikipedia.org/wiki/LOLCODE')
+        expect(component.find(Tech).at(1).prop('image')).toEqual('lolcat.jpg')
     })
 
     it('handles setting active technology', () => {
