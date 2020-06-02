@@ -15,10 +15,12 @@ describe('PortfolioCard', () => {
                     {
                         name: 'Javascript', 
                         image: 'images/Techs/javascript.png',
+                        url: 'a.com',
                     },
                     {
                         name: 'Bootstrap',
                         image: 'images/Techs/bootstrap.png',
+                        url: 'b.com',
                     },
                 ],
                 image: 'johncleese.jpg',
@@ -43,10 +45,12 @@ describe('PortfolioCard', () => {
 
         expect(component.find(Tech).length).toEqual(2)
         expect(component.find(Tech).at(0).prop('name')).toEqual('Javascript')
-        expect(component.find(Tech).at(0).prop('url')).toEqual('images/Techs/javascript.png')
+        expect(component.find(Tech).at(0).prop('url')).toEqual('a.com')
+        expect(component.find(Tech).at(0).prop('image')).toEqual('images/Techs/javascript.png')
         expect(component.find(Tech).at(0).prop('size')).toEqual('tech-small')
         expect(component.find(Tech).at(1).prop('name')).toEqual('Bootstrap')
-        expect(component.find(Tech).at(1).prop('url')).toEqual('images/Techs/bootstrap.png')
+        expect(component.find(Tech).at(1).prop('url')).toEqual('b.com')
+        expect(component.find(Tech).at(1).prop('image')).toEqual('images/Techs/bootstrap.png')
         expect(component.find(Tech).at(1).prop('size')).toEqual('tech-small')
 
         expect(component.find(`.${cb}__link`).at(0).prop('href')).toEqual('montypythonisthebomb.com')
