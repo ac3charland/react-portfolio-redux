@@ -23,16 +23,19 @@ export default class Technologies extends Component {
         techs: [],
     }
 
+    reset;
+
     techEnter = (id) => {
+        clearTimeout(this.reset)
         this.setState({
             selectedTech: id,
         })
+        this.reset = setTimeout(() => this.setState({selectedTech: 'none'}), 2000)
     }
 
     techLeave = () => {
-        this.setState({
-            selectedTech: 'none',
-        })
+        clearTimeout(this.reset)
+        this.reset = setTimeout(() => this.setState({selectedTech: 'none'}), 500)
     }
 
     render() {
