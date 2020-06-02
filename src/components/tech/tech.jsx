@@ -5,25 +5,32 @@ import NewWindowScreenReaderWarning from '../new-window-warning/new-window-warni
 
 const cb = 'tech'
 
-const Tech = props => (
-    <div id={`tech-wrapper-${props.index}`} className={cb}>
-        <a href={props.url} target='_blank' rel='noopener noreferrer' onFocus={props.onMouseEnter} onBlur={props.onMouseLeave}>
-            <div className={`${cb}__image-wrapper ${props.size}`}>
-                <img
-                    className={`${cb}__image`}
-                    alt={props.name}
-                    src={props.image}
-                    onMouseEnter={props.onMouseEnter}
-                    onMouseLeave={props.onMouseLeave}
-                />
-            </div>
-            <div className={`${cb}__title-wrapper`}>
-                <h3 className={`${cb}__title`}>{props.name}</h3>
-                <NewWindowScreenReaderWarning/>
-            </div>
-        </a>
-    </div>
-)
+const Tech = props => {
+    const {index, url, image, name, onMouseEnter, onMouseLeave, size} = props
+    const isSmall = size === 'tech-small'
+    return (
+        <div id={`tech-wrapper-${index}`} className={cb}>
+            <a href={url} target='_blank' rel='noopener noreferrer' onFocus={onMouseEnter} onBlur={onMouseLeave}>
+                <div className={`${cb}__image-wrapper ${size}`}>
+                    <img
+                        className={`${cb}__image`}
+                        alt={name}
+                        src={image}
+                        onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                    />
+                </div>
+                <div className={`${cb}__title-wrapper`}>
+                    {isSmall ?
+                        <h4 className={`${cb}__title`}>{name}</h4> :
+                        <h3 className={`${cb}__title`}>{name}</h3>
+                    }
+                    <NewWindowScreenReaderWarning />
+                </div>
+            </a>
+        </div>
+    )
+}
 
 Tech.propTypes = {
     index: PropTypes.number,

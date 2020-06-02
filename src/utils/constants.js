@@ -1,6 +1,8 @@
 export const ROOT_URL = '/'
 export const RESUME_URL = '/resume'
 
+export const emptyFunction = () => {}
+
 // Section IDs
 export const PROJECTS_ID = 'projects'
 export const TECHNOLOGIES_ID = 'technologies'
@@ -69,6 +71,8 @@ export const SASS_ICON = generateLogoUrl('sass')
 
 // Redux Actions
 export const MARK_HOME_PAGE_AS_VISITED = 'MARK_HOME_PAGE_AS_VISITED'
+export const ON_HOME_PAGE = 'ON_HOME_PAGE'
+export const LEAVING_HOME_PAGE = 'LEAVING_HOME_PAGE'
 
 // Technologies
 class Technology {

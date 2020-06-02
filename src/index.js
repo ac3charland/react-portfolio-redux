@@ -4,7 +4,7 @@ import {Provider} from 'react-redux'
 import './index.scss'
 import * as serviceWorker from './serviceWorker'
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
-import NavBar from './components/nav-bar/nav-bar'
+import {ConnectedNavBar} from './components/nav-bar/nav-bar'
 import Footer from './components/footer/footer'
 import {ConnectedHomePage} from './pages/home-page/home-page'
 import ResumePage from './pages/resume-page/resume-page'
@@ -19,7 +19,7 @@ ReactDOM.render(
       <Router>
         <div className='content-wrapper'>
           <div className='flex'>
-            <NavBar />
+            <ConnectedNavBar />
             <div className='page-wrapper'>
               <Switch>
                 <Route exact path={ROOT_URL} component={ConnectedHomePage} />

@@ -1,4 +1,4 @@
-import HomePage, {mapStateToProps} from './home-page'
+import HomePage from './home-page'
 import PortfolioCarousel from '../../components/portfolio-carousel/portfolio-carousel'
 import Technologies from '../../components/technologies/technologies'
 
@@ -21,26 +21,6 @@ describe('HomePage', () => {
         expect(component.find(`.${cb}`).length).toEqual(1)
         expect(component.find(PortfolioCarousel).prop('projects')).toEqual(expectedProjects)
         expect(component.find(Technologies).prop('techs')).toEqual(expectedTechnologies)
-    })
-
-    describe('mapStateToProps', () => {
-        [
-            {
-                description: 'undefined props',
-                state: {app: {}},
-                expected: {},
-            },
-            {
-                description: 'populated props',
-                state: {app: {homePageVisted: true}},
-                expected: {visited: true},
-            },
-        ].forEach(test => {
-            it(`correctly maps state to props with ${test.description}`, () => {
-                const result = mapStateToProps(test.state)
-                expect(result).toEqual(test.expected)
-            })
-        })
     })
 })
 

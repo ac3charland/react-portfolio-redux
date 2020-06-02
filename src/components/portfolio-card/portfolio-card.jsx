@@ -26,7 +26,7 @@ const PortfolioCard = ({project, id}) => {
                         {technologies.map((tech, idx) => {
                             return (
                                 <div key={'project-tech-' + idx} className={`${cb}__tech-wrapper`}>
-                                    <Tech name={tech.name} url={tech.image} size='tech-small' />
+                                    <Tech name={tech.name} image={tech.image} url={tech.url} size='tech-small' />
                                 </div>
                             )
                         })}
