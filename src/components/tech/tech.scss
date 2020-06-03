@@ -3,14 +3,16 @@
 .tech {
     text-align: center;
 
-    a {
-        outline-style: none;
-        text-decoration: none;
-        color: black;
+    &:not(.tech-small) {
+        a {
+            outline-style: none;
+            text-decoration: none;
+            color: black;
 
-        @include small-screen {
-            color: $primary-color;
-            text-decoration: underline;
+            @include small-screen {
+                color: $primary-color;
+                text-decoration: underline;
+            }
         }
     }
 
@@ -33,15 +35,14 @@
     &__image {
         width: 100%;
     }
-
 }
 
-.tech-normal {
+.tech-normal__image {
     width: 130px;
     height: 130px;
 }
 
-.tech-small {
+.tech-small__image {
     object-fit: cover;
     @media (max-width: 992px) {
         width: 7vw;

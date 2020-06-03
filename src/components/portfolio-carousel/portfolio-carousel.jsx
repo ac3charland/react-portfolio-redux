@@ -47,6 +47,11 @@ export default class PortfolioCarousel extends Component {
         })
     }
 
+    onFocus = idx => {
+        clearInterval(this.slideShow)
+        this.setState({index: idx})
+    }
+
     runSlideShow = () => {
         const component = this
         component.slideShow = setInterval(component.nextProject, 3500)
@@ -70,9 +75,21 @@ export default class PortfolioCarousel extends Component {
                     </div>
                     <div className={`${cb}__slider-wrapper`}>
                         <div className={`cards-slider active-slide-${index}`} >
-                            <div className='cards-slider-wrapper' style={{transform: `translateX(-${index * (100 / projects.length)}%)`}}>
+                            <div
+                                className='cards-slider-wrapper'
+                                style={{transform: `translateX(-${index * (100 / projects.length)}%)`}}
+                            >
                                 {
-                                    projects.map((project, idx) => <PortfolioCard key={idx} project={project} id={idx}/>)
+                                    projects.map((project, idx) => (
+                                        <div
+                                            key={idx}
+                                            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+                                            tabIndex={0}
+                                            onFocus={() => this.onFocus(idx)}
+                                        >
+                                            <PortfolioCard key={idx} project={project} id={idx} />
+                                        </div>
+                                    ))
                                 }
                             </div>
                         </div>
