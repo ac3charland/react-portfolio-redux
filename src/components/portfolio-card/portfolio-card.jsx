@@ -6,13 +6,13 @@ import NewWindowScreenReaderWarning from '../new-window-warning/new-window-warni
 
 const cb = 'card'
 
-const PortfolioCard = ({project, id}) => {
+const PortfolioCard = ({project, id, transition = 'none'}) => {
     if (project) {
         const {name, desc, technologies = [], image, url, github} = project
 
 
         return (
-            <div id={`card-${id}`} className={cb}>
+            <div id={`card-${id}`} className={cb} style={{transition}}>
                 <div className={`${cb}__flex-column-wrapper`}>
                     <div className={`${cb}__title-wrapper`}>
                         <h3 className={`${cb}__heading`}>{name}</h3>
@@ -59,6 +59,7 @@ const PortfolioCard = ({project, id}) => {
 PortfolioCard.propTypes = {
     project: PropTypes.object,
     id: PropTypes.number,
+    transition: PropTypes.string,
 }
 
 export default PortfolioCard
