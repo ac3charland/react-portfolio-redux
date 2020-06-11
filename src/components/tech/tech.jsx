@@ -9,9 +9,9 @@ const Tech = props => {
     const {index, url, image, name, onMouseEnter, onMouseLeave, size} = props
     const isSmall = size === 'tech-small'
     return (
-        <div id={`tech-wrapper-${index}`} className={cb}>
+        <div id={`tech-wrapper-${index}`} className={`${cb} ${size}`}>
             <a href={url} target='_blank' rel='noopener noreferrer' onFocus={onMouseEnter} onBlur={onMouseLeave}>
-                <div className={`${cb}__image-wrapper ${size}`}>
+                <div className={`${cb}__image-wrapper ${size}__image`}>
                     <img
                         className={`${cb}__image`}
                         alt={name}

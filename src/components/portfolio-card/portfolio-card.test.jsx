@@ -78,4 +78,13 @@ describe('PortfolioCard', () => {
         const component = render()
         expect(component.find(`.${cb}`).length).toEqual(1)
     })
+
+    it('sets hrefs to null when disabled flag is true', () => {
+        props.disabled = true
+        const component = render()
+        expect(component.find(Tech).at(0).prop('url')).toEqual(null)
+        expect(component.find(Tech).at(1).prop('url')).toEqual(null)
+        expect(component.find(`.${cb}__link`).at(0).prop('href')).toEqual(null)
+        expect(component.find(`.${cb}__link`).at(1).prop('href')).toEqual(null)
+    })
 })
