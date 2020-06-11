@@ -3,7 +3,7 @@ const baseConfig = {
     engine: 'chromy',
     report: [],
     fileNameTemplate: '{scenarioLabel}',
-    reseembleOutputOptions: {
+    resembleOutputOptions: {
         transparency: 0.25
     }
 }
