@@ -75,7 +75,7 @@ export default class PortfolioCarousel extends Component {
 
     onFocus = idx => {
         clearInterval(this.slideShow)
-        this.setState({index: idx})
+        this.setState({index: idx, transition: defaultTransition})
     }
 
     runSlideShow = () => {
@@ -99,7 +99,7 @@ export default class PortfolioCarousel extends Component {
                 <h2 id={PROJECTS_ID} className={`${cb}__heading`} tabIndex='-1'>Projects</h2>
                 <div className={`${cb}__flex`}>
                     <div className={`${cb}__button-wrapper ${cb}__left`}>
-                        <button className={`${cb}__button`} onClick={() => this.prevProject()}>
+                        <button className={`${cb}__button`} tabIndex={-1} onClick={() => this.prevProject()}>
                             <i className='fa fa-chevron-left'></i>
                         </button>
                     </div>
@@ -111,7 +111,7 @@ export default class PortfolioCarousel extends Component {
                             >
                                 {
                                     infiniteProjects.map((project, idx) => {
-                                        const isDuplicate = idx < numberOfProjectsToShow || idx > projects.length + numberOfProjectsToShow
+                                        const isDuplicate = idx < numberOfProjectsToShow || idx >= projects.length + numberOfProjectsToShow 
                                         const tabIndex = isDuplicate ? -1 : 0
                                         return (
                                             <div
@@ -120,7 +120,7 @@ export default class PortfolioCarousel extends Component {
                                                 tabIndex={tabIndex}
                                                 onFocus={() => this.onFocus(idx)}
                                             >
-                                                <PortfolioCard key={idx} project={project} id={idx} transition={transition} />
+                                                <PortfolioCard key={idx} project={project} id={idx} transition={transition} disabled={isDuplicate} handleFocus={() => this.onFocus(idx)} />
                                             </div>
                                         )
                                     })
@@ -129,7 +129,7 @@ export default class PortfolioCarousel extends Component {
                         </div>
                     </div>
                     <div className={`${cb}__button-wrapper ${cb}__right`}>
-                        <button className={`${cb}__button`} onClick={() => this.nextProject(true)}>
+                        <button className={`${cb}__button`} tabIndex={-1} onClick={() => this.nextProject(true)}>
                             <i className='fa fa-chevron-right'></i>
                         </button>
                     </div>

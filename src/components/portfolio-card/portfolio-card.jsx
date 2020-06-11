@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import Tech from '../tech/tech'
 import './portfolio-card.scss'
 import NewWindowScreenReaderWarning from '../new-window-warning/new-window-warning'
+import {emptyFunction} from '../../utils/constants'
 
 const cb = 'card'
 
-const PortfolioCard = ({project, id, transition = 'none'}) => {
+const PortfolioCard = ({project, id, transition = 'none', disabled, handleFocus = emptyFunction}) => {
     if (project) {
         const {name, desc, technologies = [], image, url, github} = project
 
@@ -16,7 +17,8 @@ const PortfolioCard = ({project, id, transition = 'none'}) => {
                 <div className={`${cb}__flex-column-wrapper`}>
                     <div className={`${cb}__title-wrapper`}>
                         <h3 className={`${cb}__heading`}>{name}</h3>
-                        <a className={`${cb}__image-wrapper`} href={url ? url : github} target='_blank' rel='noopener noreferrer'>
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                        <a className={`${cb}__image-wrapper`} href={!disabled ? url ? url : github : null} target='_blank' rel='noopener noreferrer'>
                             <img className={`${cb}__image`} src={image} alt={`Screenshot of ${name}`} />
                             <NewWindowScreenReaderWarning />
                         </a>
@@ -26,7 +28,7 @@ const PortfolioCard = ({project, id, transition = 'none'}) => {
                         {technologies.map((tech, idx) => {
                             return (
                                 <div key={'project-tech-' + idx} className={`${cb}__tech-wrapper`}>
-                                    <Tech name={tech.name} image={tech.image} url={tech.url} size='tech-small' />
+                                    <Tech name={tech.name} image={tech.image} url={!disabled ? tech.url : null} size='tech-small' />
                                 </div>
                             )
                         })}
@@ -34,7 +36,8 @@ const PortfolioCard = ({project, id, transition = 'none'}) => {
                     <div className={`${cb}__links`}>
                         {url &&
                             <div className={`${cb}__link-wrapper`}>
-                                <a className={`${cb}__link`} href={url} target='_blank' rel='noopener noreferrer'>
+                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                                <a className={`${cb}__link`} href={!disabled ? url : null} target='_blank' rel='noopener noreferrer' onFocus={() => handleFocus()}>
                                     <i className='fa fa-link' aria-hidden='true'></i>
                                     <NewWindowScreenReaderWarning customMessage='Link to Project (Opens a new window)' />
                                 </a>
@@ -42,7 +45,8 @@ const PortfolioCard = ({project, id, transition = 'none'}) => {
                         }
                         {github &&
                             <div className={`${cb}__link-wrapper`}>
-                                <a className={`${cb}__link`} href={github} target='_blank' rel='noopener noreferrer'>
+                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                                <a className={`${cb}__link`} href={!disabled ? github : null} target='_blank' rel='noopener noreferrer' onFocus={() => handleFocus()}>
                                     <i className='fa fa-github-square' aria-hidden='true'></i>
                                     <NewWindowScreenReaderWarning customMessage='Github Link (Opens a new window)' />
                                 </a>
@@ -57,6 +61,8 @@ const PortfolioCard = ({project, id, transition = 'none'}) => {
 }
 
 PortfolioCard.propTypes = {
+    disabled: PropTypes.bool,
+    handleFocus: PropTypes.func,
     project: PropTypes.object,
     id: PropTypes.number,
     transition: PropTypes.string,
