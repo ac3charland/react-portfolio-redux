@@ -27,17 +27,7 @@ export default class Technologies extends Component {
 
     techEnter = (id) => {
         clearTimeout(this.reset)
-        this.setState(
-            {selectedTech: id},
-            () => {
-                const element = document.getElementById(`tech-wrapper-${this.state.selectedTech}`)
-                if (element) {
-                    const link = element.getElementsByTagName('A')[0]
-                    if (link) {
-                        link.focus()
-                    }
-                }
-            })
+        this.setState({selectedTech: id})
     }
 
     techLeave = () => {
