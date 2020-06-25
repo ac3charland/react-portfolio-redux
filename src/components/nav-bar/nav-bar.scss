@@ -14,9 +14,13 @@
     @include section-styling;
   }
 
-  &__home:focus {
-    .navbar__logo {
-      @include scale(1.2);
+  &__home {
+    outline: none;
+
+    &:focus {
+      .navbar__logo {
+        @include scale(1.2);
+      }
     }
   }
 
