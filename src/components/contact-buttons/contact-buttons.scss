@@ -12,6 +12,8 @@
     }
 
     &__button {
+        outline: none;
+        
         &:focus,
         &:hover {
             .contact-buttons__button-wrapper {
