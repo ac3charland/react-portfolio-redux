@@ -7,7 +7,9 @@ import {emptyFunction} from '../../utils/constants'
 
 const cb = 'card'
 
-const PortfolioCard = ({project, id, transition = 'none', disabled, handleFocus = emptyFunction}) => {
+const PortfolioCard = props => {
+    const {project, id, transition = 'none', disabled, handleFocus = emptyFunction} = props
+    
     if (project) {
         const {name, desc, technologies = [], image, url, github} = project
 
