@@ -11,7 +11,6 @@ const PortfolioCard = ({project, id, transition = 'none', disabled, handleFocus 
     if (project) {
         const {name, desc, technologies = [], image, url, github} = project
 
-
         return (
             <div id={`card-${id}`} className={cb} style={{transition}}>
                 <div className={`${cb}__flex-column-wrapper`}>
@@ -57,6 +56,7 @@ const PortfolioCard = ({project, id, transition = 'none', disabled, handleFocus 
             </div>
         )
     }
+    
     return null
 }
 

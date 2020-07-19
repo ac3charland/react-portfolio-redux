@@ -4,10 +4,10 @@ import {Provider} from 'react-redux'
 import './index.scss'
 import * as serviceWorker from './serviceWorker'
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
-import {ConnectedNavBar} from './components/nav-bar/nav-bar'
+import NavBar from './components/nav-bar/nav-bar'
 import Footer from './components/footer/footer'
-import {ConnectedHomePage} from './pages/home-page/home-page'
-import ResumePage from './pages/resume-page/resume-page'
+import {HomePage} from './pages/home-page/home-page'
+import {ResumePage} from './pages/resume-page/resume-page'
 import {RESUME_URL, ROOT_URL} from './utils/constants'
 import makeStore from './store'
 
@@ -19,12 +19,12 @@ ReactDOM.render(
       <Router>
         <div className='content-wrapper'>
           <div className='flex'>
-            <ConnectedNavBar />
+            <NavBar />
             <div className='page-wrapper'>
               <Switch>
-                <Route exact path={ROOT_URL} component={ConnectedHomePage} />
+                <Route exact path={ROOT_URL} component={HomePage} />
                 <Route exact path={RESUME_URL} component={ResumePage} />
-                <Route component={ConnectedHomePage} />
+                <Route component={HomePage} />
               </Switch>
             </div>
             <Footer />

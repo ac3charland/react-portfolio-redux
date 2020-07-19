@@ -1,19 +1,23 @@
-import HomePage from './home-page'
+import {Provider} from 'react-redux'
+import {HomePage} from './home-page'
 import PortfolioCarousel from '../../components/portfolio-carousel/portfolio-carousel'
 import Technologies from '../../components/technologies/technologies'
 
 const cb = 'home'
 
 describe('HomePage', () => {
-    let props, render
+    let props, render, store
 
     beforeEach(() => {
+        store = {
+
+        }
         props = {
             homePageVisted: true,
             markAsVisited: jest.fn(),
         }
 
-        render = (changedProps = {}) => mount(<HomePage {...props} {...changedProps} />)
+        render = (changedProps = {}) => mount(<Provider store={store}><HomePage {...props} {...changedProps} /></Provider>)
     })
 
     it('renders without crashing', () => {
