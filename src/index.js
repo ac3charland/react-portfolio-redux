@@ -7,7 +7,7 @@ import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import NavBar from './components/nav-bar/nav-bar'
 import Footer from './components/footer/footer'
 import {HomePage} from './pages/home-page/home-page'
-import {ResumePage} from './pages/resume-page/resume-page'
+import ResumePage from './pages/resume-page/resume-page'
 import {RESUME_URL, ROOT_URL} from './utils/constants'
 import makeStore from './store'
 

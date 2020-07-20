@@ -2,16 +2,17 @@ import {Provider} from 'react-redux'
 import {HomePage} from './home-page'
 import PortfolioCarousel from '../../components/portfolio-carousel/portfolio-carousel'
 import Technologies from '../../components/technologies/technologies'
+import configureStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
 
+const mockStore = configureStore([thunk])
 const cb = 'home'
 
 describe('HomePage', () => {
     let props, render, store
 
     beforeEach(() => {
-        store = {
-
-        }
+        store = mockStore({})
         props = {
             homePageVisted: true,
             markAsVisited: jest.fn(),

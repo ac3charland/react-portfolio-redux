@@ -4,7 +4,7 @@ import {ROOT_URL, GITHUB_PROFILE_URL, TEMPLATE_APP, BASH_PROFILE_URL, READGEEK_S
 
 const cb = 'resume'
 
-export const ResumePage = () => {
+const ResumePage = () => {
 
     useEffect(() => {
         const e = document.getElementById(RESUME_ID)
@@ -48,3 +48,5 @@ export const ResumePage = () => {
     )
 
 }
+
+export default ResumePage
