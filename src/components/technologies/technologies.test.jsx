@@ -1,3 +1,4 @@
+import React from 'react'
 import Technologies from './technologies'
 import Tech from '../tech/tech'
 
@@ -30,14 +31,6 @@ describe('Technologies', () => {
         expect(component.find(Tech).at(1).prop('name')).toEqual('LOLCODE')
         expect(component.find(Tech).at(1).prop('url')).toEqual('https://en.wikipedia.org/wiki/LOLCODE')
         expect(component.find(Tech).at(1).prop('image')).toEqual('lolcat.jpg')
-    })
-
-    it('handles setting active technology', () => {
-        const component = render()
-        expect(component.find('.active-card-none').length).toEqual(1)
-        component.setState({selectedTech: 1})
-        expect(component.find('.active-card-none').length).toEqual(0)
-        expect(component.find('.active-card-1').length).toEqual(1)
     })
 
     it('does not crash with empty props', () => {
