@@ -1,5 +1,5 @@
 import {Provider} from 'react-redux'
-import {HomePage} from './home-page'
+import HomePage from './home-page'
 import PortfolioCarousel from '../../components/portfolio-carousel/portfolio-carousel'
 import Technologies from '../../components/technologies/technologies'
 import configureStore from 'redux-mock-store'

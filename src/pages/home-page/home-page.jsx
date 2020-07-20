@@ -11,7 +11,7 @@ import {DISPLAY_PROJECTS, DISPLAY_TECHNOLOGIES} from '../../utils/constants'
 
 const cb = 'home'
 
-export const HomePage = () => {
+const HomePage = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -41,3 +41,5 @@ const scrollToElement = () => {
         e.focus()
     }
 }
+
+export default HomePage
