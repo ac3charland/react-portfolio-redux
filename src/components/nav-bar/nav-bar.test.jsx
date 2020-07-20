@@ -1,14 +1,19 @@
-import NavBar, {mapStateToProps} from './nav-bar'
+import NavBar from './nav-bar'
+import configureStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
+import {Provider} from 'react-redux'
 
+const mockStore = configureStore([thunk])
 const cb = 'navbar'
 
 describe('NavBar', () => {
-    let props, render
+    let props, render, store
 
     beforeEach(() => {
         props = {}
+        store = mockStore({app: {}})
 
-        render = (changedProps = {}) => mount(<NavBar {...props} {...changedProps} />)
+        render = (changedProps = {}) => mount(<Provider store={store}><NavBar {...props} {...changedProps} /></Provider>)
     })
 
     it('renders without crashing', () => {
@@ -24,7 +29,7 @@ describe('NavBar', () => {
     })
 
     it('renders on home page with scroll buttons without crashing', () => {
-        props.onHomePage = true
+        store = mockStore({app: {onHomePage: true}})
         const component = render()
         expect(component.find(`.${cb}`).length).toEqual(1)
         expect(component.find(`.${cb} a`).length).toEqual(2)
@@ -47,25 +52,5 @@ describe('NavBar', () => {
         expect(component.find('button.open').length).toEqual(1)
         expect(component.find('.fa-bars').length).toEqual(0)
         expect(component.find('.fa-times').length).toEqual(1)
-    })
-
-    describe('mapStateToProps', () => {
-        [
-            {
-                description: 'undefined props',
-                state: {app: {}},
-                expected: {},
-            },
-            {
-                description: 'populated props',
-                state: {app: {onHomePage: true}},
-                expected: {onHomePage: true},
-            },
-        ].forEach(test => {
-            it(`correctly maps state to props with ${test.description}`, () => {
-                const result = mapStateToProps(test.state)
-                expect(result).toEqual(test.expected)
-            })
-        })
     })
 })
