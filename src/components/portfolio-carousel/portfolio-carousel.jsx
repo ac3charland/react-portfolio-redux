@@ -36,11 +36,11 @@ const PortfolioCarousel = ({projects}) => {
         setIndex(idx)
     }
 
-    const runSlideShow = () => {
-        slideShow = setInterval(nextProject, 3500)
-    }
-
     useEffect(() => {
+        const runSlideShow = () => {
+            slideShow = setInterval(nextProject, 3500)
+        }
+
         runSlideShow()
     }, [])
 
@@ -63,7 +63,7 @@ const PortfolioCarousel = ({projects}) => {
                 animationSpeed
             )
         }
-    }, [index])
+    }, [index, projects])
 
     const duplicateBeforeProjects = projects.slice((-1 * numberOfProjectsToShow))
     const duplicateAfterProjects = projects.slice(0, numberOfProjectsToShow)
