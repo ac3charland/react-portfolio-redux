@@ -42,7 +42,7 @@ export const SITE_LOGO = 'logo512.png'
 export const HEADSHOT = 'headshot.jpg'
 
 // Project images
-const generateProjectUrl = file => `/project-images/${file}.jpg`
+const generateProjectUrl = (file: string) => `/project-images/${file}.jpg`
 export const FRANSEN_FAMILY_JOURNAL_IMAGE = generateProjectUrl('ffj')
 export const SHREDDIT_IMAGE = generateProjectUrl('shreddit')
 export const CHARLANDS_WED_IMAGE = generateProjectUrl('charlandswed')
@@ -51,7 +51,7 @@ export const TEMPLATE_APP_IMAGE = generateProjectUrl('template')
 export const WAFFLE_TIMER_IMAGE = generateProjectUrl('waffletimer')
 
 // Tech logos
-const generateLogoUrl = file => `/tech-logos/${file}.jpg`
+const generateLogoUrl = (file: string) => `/tech-logos/${file}.jpg`
 export const HTML_ICON = generateLogoUrl('html')
 export const CSS_ICON = generateLogoUrl('css')
 export const JS_ICON = generateLogoUrl('javascript')
@@ -76,7 +76,11 @@ export const LEAVING_HOME_PAGE = 'LEAVING_HOME_PAGE'
 
 // Technologies
 class Technology {
-    constructor(name, image, url) {
+    name: string
+    image: string
+    url: string
+
+    constructor(name: string, image: string, url: string) {
         this.name = name
         this.image = image
         this.url = url
@@ -121,7 +125,14 @@ export const DISPLAY_TECHNOLOGIES = [
 
 // Projects
 class Project {
-    constructor(name, desc, technologies, image, url, github) {
+    name: string 
+    desc: string 
+    technologies: Array<Technology>
+    image: string
+    url: string | null
+    github: string | null
+
+    constructor(name: string, desc: string, technologies: Array<Technology>, image: string, url: string | null, github: string | null) {
         this.name = name
         this.desc = desc
         this.technologies = technologies || []
