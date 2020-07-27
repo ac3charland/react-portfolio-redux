@@ -75,7 +75,7 @@ export const ON_HOME_PAGE = 'ON_HOME_PAGE'
 export const LEAVING_HOME_PAGE = 'LEAVING_HOME_PAGE'
 
 // Technologies
-class Technology {
+export class Technology {
     name: string
     image: string
     url: string
@@ -129,10 +129,10 @@ class Project {
     desc: string 
     technologies: Array<Technology>
     image: string
-    url: string | null
-    github: string | null
+    url?: string
+    github?: string
 
-    constructor(name: string, desc: string, technologies: Array<Technology>, image: string, url: string | null, github: string | null) {
+    constructor(name: string, desc: string, technologies: Array<Technology>, image: string, url?: string, github?: string) {
         this.name = name
         this.desc = desc
         this.technologies = technologies || []
@@ -174,8 +174,7 @@ export const EWIPATCHES = new Project(
     'A side project that provides 3rd-party synthesizer patches for the Akai EWI 4000.',
     [AWS, REACT, JEST, CYPRESS],
     EWIPATCHES_IMAGE,
-    'https://www.ewipatches.com/',
-    null
+    'https://www.ewipatches.com/'
 )
 
 export const WAFFLE_TIMER = new Project(
@@ -192,7 +191,7 @@ export const TEMPLATE_APP = new Project(
     'A skeleton app with my preferred setup for UI, testing, and accessibility. A great place to learn more about my development preferences.',
     [REACT, REDUX, JEST, BACKSTOP, CYPRESS],
     TEMPLATE_APP_IMAGE,
-    null,
+    undefined,
     'https://github.com/ac3charland/react-template'
 )
 

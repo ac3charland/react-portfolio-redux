@@ -15,7 +15,7 @@ const ResumePage = () => {
 
     return (
         <div className={cb}>
-            <h1 className={`${cb}__large`} id={RESUME_ID} tabIndex='-1'>Here's the thing...</h1>
+            <h1 className={`${cb}__large`} id={RESUME_ID} tabIndex={-1}>Here's the thing...</h1>
             <p className={`${cb}__normal`}>You’re here because you want my resume, and you’re more than welcome to it&mdash;just click the download button below.</p>
             <h2 className={`${cb}__extra-large`}>But...</h2>
             <p className={`${cb}__normal`}>Many of the questions you want my resume to answer will probably be better answered if you:</p>
@@ -46,7 +46,6 @@ const ResumePage = () => {
             <a className={`${cb}__download-button`} href={RESUME_DOWNLOAD_URL} download><strong>Download</strong></a>
         </div>
     )
-
 }
 
 export default ResumePage

@@ -14,7 +14,7 @@ describe('ResumePage', () => {
     it('renders without crashing', () => {
         const component = render()
         expect(component.find(`.${cb}`).length).toEqual(1)
-        expect(component.find(`#resume-heading`).prop('tabIndex')).toEqual('-1')
+        expect(component.find(`#resume-heading`).prop('tabIndex')).toEqual(-1)
 
         expect(component.find(`.${cb}__button`).at(0).prop('href')).toEqual('/')
         expect(component.find(`.${cb}__button`).at(1).prop('href')).toEqual('https://github.com/ac3charland')

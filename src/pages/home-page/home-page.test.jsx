@@ -54,7 +54,7 @@ const expectedProjects = [
         ],
         image: '/project-images/ewipatches.jpg',
         url: 'https://www.ewipatches.com/',
-        github: null,
+        github: undefined,
     },
     {
         name: 'Waffle Timer',
@@ -104,7 +104,7 @@ const expectedProjects = [
         ],
 
         image: '/project-images/template.jpg',
-        url: null,
+        url: undefined,
         github: 'https://github.com/ac3charland/react-template',
     },
 ]
