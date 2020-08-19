@@ -21,7 +21,6 @@ const HomePage = () => {
         return () => {
             dispatch(leavingHomePage())
         }
-        // eslint-disable-next-line
     }, [])
 
     return (
