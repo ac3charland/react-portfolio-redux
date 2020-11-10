@@ -69,30 +69,6 @@ const expectedProjects = [
         github: 'https://github.com/ac3charland/waffle-timer',
     },
     {
-        name: 'Shreddit',
-        desc: 'A full-stack MERN application that allows users to create short melodies in a grid-based sequencer. This app was my capstone project at the University of Minnesota web development bootcamp.',
-        technologies: [
-            {name: 'MongoDB', image: '/tech-logos/mongodb.jpg', url: 'https://www.mongodb.com/'},
-            {name: 'React', image: '/tech-logos/react.jpg', url: 'https://reactjs.org/'},
-            {name: 'Node.js', image: '/tech-logos/node.jpg', url: 'https://nodejs.org/en/'},
-        ],
-        image: '/project-images/shreddit.jpg',
-        url: 'https://shredditmern.herokuapp.com/',
-        github: 'https://github.com/ac3charland/Shreddit',
-    },
-    {
-        name: 'Fransen Family Journal',
-        desc: 'A blogging site I built to keep my extended family connected. Technically, this was my first client-facing project!',
-        technologies: [
-            {name: 'Passport.js', image: '/tech-logos/passport.jpg', url: 'http://www.passportjs.org/'},
-            {name: 'MongoDB', image: '/tech-logos/mongodb.jpg', url: 'https://www.mongodb.com/'},
-            {name: 'Node.js', image: '/tech-logos/node.jpg', url: 'https://nodejs.org/en/'},
-        ],
-        image: '/project-images/ffj.jpg',
-        url: 'https://fransenfamilyjournal.herokuapp.com/',
-        github: 'https://github.com/ac3charland/FransenFamilyJournal',
-    },
-    {
         name: 'React/Redux Template',
         desc: 'A skeleton app with my preferred setup for UI, testing, and accessibility. A great place to learn more about my development preferences.',
         technologies: [
