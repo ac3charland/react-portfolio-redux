@@ -82,11 +82,11 @@ class Technology {
     }
 }
 
-export const HTML = new Technology('HTML5 (incl. Accessible Design)', HTML_ICON, HTML_URL)
+export const HTML = new Technology('HTML5 (incl. Accessibility)', HTML_ICON, HTML_URL)
 export const CSS = new Technology('CSS3 (incl. Flexbox & Animations)', CSS_ICON, CSS_URL)
 export const JAVASCRIPT = new Technology('Javascript (ES6)', JS_ICON, JS_URL)
 export const GIT = new Technology('Git (incl. Git Flow)', GIT_ICON, GIT_URL)
-export const REACT = new Technology('React', REACT_ICON, REACT_URL)
+export const REACT = new Technology('React (incl. Hooks)', REACT_ICON, REACT_URL)
 export const REDUX = new Technology('Redux', REDUX_ICON, REDUX_URL)
 export const MONGODB = new Technology('MongoDB', MONGO_ICON, MONGODB_URL)
 export const PASSPORT = new Technology('Passport.js', PASSPORT_ICON, PASSPORT_URL)
