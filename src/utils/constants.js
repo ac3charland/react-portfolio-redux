@@ -17,6 +17,7 @@ export const BASH_PROFILE_URL = 'https://github.com/ac3charland/BashProfile'
 export const READGEEK_SCRAPER_URL = 'https://github.com/ac3charland/ReadGeekScraper'
 export const RESUME_DOWNLOAD_URL = 'https://tinyurl.com/yc8h9fx3'
 export const BEST_BUY_URL = 'https://www.bestbuy.com/'
+export const NM_URL = 'https://www.northwesternmutual.com/'
 export const SWIFT_URL = 'https://developer.apple.com/swift/'
 export const BOOTCAMP_URL = 'https://bootcamp.umn.edu/coding/'
 export const MUSIC_URL = 'https://alexfranzen.bandcamp.com/'
@@ -203,7 +204,7 @@ export const TEMPLATE_APP = new Project(
 
 export const JACOB_BICKNASE = new Project(
     'Jacob Bicknase',
-    'Portfolio site for percussionist Jacob Bicknase with a serverless AWS-powered contact form and an event calendar powered by the open-source CMS Strapi.',
+    'Portfolio site for percussionist Jacob Bicknase, with a serverless AWS-powered contact form and an event calendar powered by the open-source CMS Strapi.',
     [REACT, REDUX, AWS, EXPRESS, TYPESCRIPT],
     JACOB_BICKNASE_IMAGE,
     'https://www.jacobbicknase.com/',
