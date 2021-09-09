@@ -1,6 +1,6 @@
 import React from 'react'
 import './bio.scss'
-import {HEADSHOT, BEST_BUY_URL, SWIFT_URL, BOOTCAMP_URL, MUSIC_URL, GITHUB_PROFILE_URL, NM_URL} from '../../utils/constants'
+import {HEADSHOT, BEST_BUY_URL, BOOTCAMP_URL, MUSIC_URL, GITHUB_PROFILE_URL, NM_URL} from '../../utils/constants'
 
 const cb = 'bio'
 
