@@ -17,16 +17,21 @@ export const BASH_PROFILE_URL = 'https://github.com/ac3charland/BashProfile'
 export const READGEEK_SCRAPER_URL = 'https://github.com/ac3charland/ReadGeekScraper'
 export const RESUME_DOWNLOAD_URL = 'https://tinyurl.com/yc8h9fx3'
 export const BEST_BUY_URL = 'https://www.bestbuy.com/'
+export const NM_URL = 'https://www.northwesternmutual.com/'
 export const SWIFT_URL = 'https://developer.apple.com/swift/'
 export const BOOTCAMP_URL = 'https://bootcamp.umn.edu/coding/'
 export const MUSIC_URL = 'https://alexfranzen.bandcamp.com/'
 export const HTML_URL = 'https://en.wikipedia.org/wiki/HTML'
 export const CSS_URL = 'https://en.wikipedia.org/wiki/Cascading_Style_Sheets'
 export const JS_URL = 'https://en.wikipedia.org/wiki/JavaScript'
+export const TS_URL = 'https://www.typescriptlang.org/'
 export const GIT_URL = 'https://git-scm.com/'
 export const REACT_URL = 'https://reactjs.org/'
+export const REACT_NATIVE_URL = 'https://reactnative.dev/'
 export const REDUX_URL = 'https://redux.js.org/'
 export const MONGODB_URL = 'https://www.mongodb.com/'
+export const MYSQL_URL = 'https://www.mysql.com/'
+export const MIKRO_ORM_URL = 'https://mikro-orm.io/'
 export const PASSPORT_URL = 'http://www.passportjs.org/'
 export const JEST_URL = 'https://jestjs.io/'
 export const BACKSTOP_URL = 'https://garris.github.io/BackstopJS/'
@@ -35,6 +40,7 @@ export const BASH_URL = 'https://en.wikipedia.org/wiki/Shell_script'
 export const ATLASSIAN_URL = 'https://www.atlassian.com/software'
 export const AWS_URL = 'https://aws.amazon.com/'
 export const NODE_URL = 'https://nodejs.org/en/'
+export const EXPRESS_URL = 'https://expressjs.com/'
 export const SASS_URL = 'https://sass-lang.com/'
 
 // Image URLs
@@ -49,17 +55,23 @@ export const CHARLANDS_WED_IMAGE = generateProjectUrl('charlandswed')
 export const EWIPATCHES_IMAGE = generateProjectUrl('ewipatches')
 export const TEMPLATE_APP_IMAGE = generateProjectUrl('template')
 export const WAFFLE_TIMER_IMAGE = generateProjectUrl('waffletimer')
+export const JACOB_BICKNASE_IMAGE = generateProjectUrl('jacobbicknase')
+export const DKA_IMAGE = generateProjectUrl('dka')
 
 // Tech logos
 const generateLogoUrl = file => `/tech-logos/${file}.jpg`
 export const HTML_ICON = generateLogoUrl('html')
 export const CSS_ICON = generateLogoUrl('css')
 export const JS_ICON = generateLogoUrl('javascript')
+export const TS_ICON = generateLogoUrl('typescript')
 export const GIT_ICON = generateLogoUrl('git')
 export const REACT_ICON = generateLogoUrl('react')
+export const REACT_NATIVE_ICON = generateLogoUrl('react-native')
 export const REDUX_ICON = generateLogoUrl('redux')
 export const PASSPORT_ICON = generateLogoUrl('passport')
 export const MONGO_ICON = generateLogoUrl('mongodb')
+export const MYSQL_ICON = generateLogoUrl('mysql')
+export const MIKRO_ORM_ICON = generateLogoUrl('mikro-orm')
 export const JEST_ICON = generateLogoUrl('jest')
 export const BACKSTOP_ICON = generateLogoUrl('backstop')
 export const CYPRESS_ICON = generateLogoUrl('cypress')
@@ -67,6 +79,7 @@ export const BASH_ICON = generateLogoUrl('bash')
 export const JIRA_ICON = generateLogoUrl('jira')
 export const AWS_ICON = generateLogoUrl('aws')
 export const NODE_ICON = generateLogoUrl('node')
+export const EXPRESS_ICON = generateLogoUrl('express')
 export const SASS_ICON = generateLogoUrl('sass')
 
 // Redux Actions
@@ -82,40 +95,45 @@ class Technology {
     }
 }
 
-export const HTML = new Technology('HTML5 (incl. Accessible Design)', HTML_ICON, HTML_URL)
+export const HTML = new Technology('HTML5 (incl. Accessibility)', HTML_ICON, HTML_URL)
 export const CSS = new Technology('CSS3 (incl. Flexbox & Animations)', CSS_ICON, CSS_URL)
 export const JAVASCRIPT = new Technology('Javascript (ES6)', JS_ICON, JS_URL)
+export const TYPESCRIPT = new Technology('Typescript', TS_ICON, TS_URL)
 export const GIT = new Technology('Git (incl. Git Flow)', GIT_ICON, GIT_URL)
-export const REACT = new Technology('React', REACT_ICON, REACT_URL)
+export const REACT = new Technology('React (incl. Hooks)', REACT_ICON, REACT_URL)
+export const REACT_NATIVE = new Technology('React Native', REACT_NATIVE_ICON, REACT_NATIVE_URL)
 export const REDUX = new Technology('Redux', REDUX_ICON, REDUX_URL)
 export const MONGODB = new Technology('MongoDB', MONGO_ICON, MONGODB_URL)
+export const MYSQL = new Technology('MySQL', MYSQL_ICON, MYSQL_URL)
+export const MIKRO_ORM = new Technology('MikroORM', MIKRO_ORM_ICON, MIKRO_ORM_URL)
 export const PASSPORT = new Technology('Passport.js', PASSPORT_ICON, PASSPORT_URL)
-export const JEST = new Technology('Jest', JEST_ICON, JEST_URL)
+export const JEST = new Technology('Jest, Enzyme, & React Testing Library', JEST_ICON, JEST_URL)
 export const BACKSTOP = new Technology('Backstop.js', BACKSTOP_ICON, BACKSTOP_URL)
 export const CYPRESS = new Technology('Cypress', CYPRESS_ICON, CYPRESS_URL)
 export const BASH = new Technology('Shell Scripting', BASH_ICON, BASH_URL)
 export const JIRA = new Technology('Atlassian Software (incl. Jira, Bitbucket, & Confluence)', JIRA_ICON, ATLASSIAN_URL)
 export const AWS = new Technology('Amazon Web Services', AWS_ICON, AWS_URL)
 export const NODE = new Technology('Node.js', NODE_ICON, NODE_URL)
+export const EXPRESS = new Technology('Express.js', EXPRESS_ICON, EXPRESS_URL)
 export const SASS = new Technology('CSS Preprocessors (SASS & LESS)', SASS_ICON, SASS_URL)
 
 export const DISPLAY_TECHNOLOGIES = [
     REACT,
+    REACT_NATIVE,
     REDUX,
+    EXPRESS,
+    TYPESCRIPT,
+    JAVASCRIPT,
+    GIT,
+    MIKRO_ORM,
+    MYSQL,
+    MONGODB,
     JEST,
     BACKSTOP,
     CYPRESS,
-    GIT,
     AWS,
-    JAVASCRIPT,
-    SASS,
-    CSS,
     HTML,
-    JIRA,
-    BASH,
-    NODE,
-    MONGODB,
-    PASSPORT,
+    SASS,
 ]
 
 // Projects
@@ -159,7 +177,7 @@ export const CHARLANDS_WED = new Project(
 
 export const EWIPATCHES = new Project(
     'EWIPatches',
-    'A side project that provides 3rd-party synthesizer patches for the Akai EWI 4000.',
+    'An online business that provides 3rd-party synthesizer patches for the Akai EWI 4000.',
     [AWS, REACT, JEST, CYPRESS],
     EWIPATCHES_IMAGE,
     'https://www.ewipatches.com/',
@@ -184,8 +202,28 @@ export const TEMPLATE_APP = new Project(
     'https://github.com/ac3charland/react-template'
 )
 
+export const JACOB_BICKNASE = new Project(
+    'Jacob Bicknase',
+    'Portfolio site for percussionist Jacob Bicknase, with a serverless AWS-powered contact form and an event calendar powered by the open-source CMS Strapi.',
+    [REACT, REDUX, AWS, EXPRESS, TYPESCRIPT],
+    JACOB_BICKNASE_IMAGE,
+    'https://www.jacobbicknase.com/',
+    null
+)
+
+export const DARN_KNIT_ANYWAY = new Project(
+    'Darn Knit Anyway',
+    'Full-stack React Native mobile app built for Stillwater, Minnesota-based knitting store Darn Knit Anyway. Featuring push notifications, a custom CMS for managing store updates, and utilization of local device storage, it is set to be released by October 2021.',
+    [REACT_NATIVE, REDUX, EXPRESS, NODE, TYPESCRIPT],
+    DKA_IMAGE,
+    null,
+    null
+)
+
 export const DISPLAY_PROJECTS = [
     CHARLANDS_WED, 
+    DARN_KNIT_ANYWAY,
+    JACOB_BICKNASE,
     EWIPATCHES,
     WAFFLE_TIMER, 
     TEMPLATE_APP,
