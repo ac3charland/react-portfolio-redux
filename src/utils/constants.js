@@ -21,6 +21,7 @@ export const NM_URL = 'https://www.northwesternmutual.com/'
 export const SWIFT_URL = 'https://developer.apple.com/swift/'
 export const BOOTCAMP_URL = 'https://bootcamp.umn.edu/coding/'
 export const MUSIC_URL = 'https://alexfranzen.bandcamp.com/'
+export const EWIPATCHES_URL = 'https://www.ewipatches.com/'
 export const HTML_URL = 'https://en.wikipedia.org/wiki/HTML'
 export const CSS_URL = 'https://en.wikipedia.org/wiki/Cascading_Style_Sheets'
 export const JS_URL = 'https://en.wikipedia.org/wiki/JavaScript'
@@ -185,7 +186,7 @@ export const EWIPATCHES = new Project(
     'An online business that provides 3rd-party synthesizer patches for the Akai EWI 4000.',
     [AWS, REACT, JEST, CYPRESS],
     EWIPATCHES_IMAGE,
-    'https://www.ewipatches.com/',
+    EWIPATCHES_URL,
     null
 )
 

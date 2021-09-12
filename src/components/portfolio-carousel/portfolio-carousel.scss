@@ -1,6 +1,8 @@
 @import "../../globals.scss";
 
-.portfolio-divider {
+$heading-offset: 4rem;
+
+.portfolio-divider-top {
     margin-top: -12rem;
     transform: rotate(180deg);
 
@@ -9,7 +11,7 @@
     }
 }
 
-.portfolio-divider svg {
+.portfolio-divider-top svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
@@ -20,25 +22,28 @@
     }
 }
 
-.portfolio-divider .shape-fill {
+.portfolio-divider-top .shape-fill {
     fill: #FFFFFF;
 }
 
 
 .portfolio-carousel {
     padding: 2rem;
+    z-index: 2;
+    position: relative;
+    background-color: white;
 
     &__heading {
-        font-size: $font-size-h3;
+        font-size: $font-size-h1;
         outline: none;
-        margin-top: -8rem;
+        margin-top: calc(-1 * #{$heading-offset});
         margin-left: 4vw;
         z-index: 2;
         position: relative;
 
         @include small-screen {
             margin-left: -1rem;
-            margin-top: -4rem;
+            margin-top: -2rem;
         }
     }
 
@@ -99,7 +104,7 @@
 
     &__slider-wrapper {
         flex-grow: 2;
-        margin-top: 4rem;
+        padding: 4rem 0;
         @include small-screen {
             margin-top: 2rem;
         }
@@ -153,3 +158,21 @@ $i: 0;
     }
 }
 /* #endregion */
+
+.portfolio-divider-bottom {
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+.portfolio-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 8.2rem;
+}
+
+.portfolio-divider-bottom .shape-fill {
+    fill: white;
+}

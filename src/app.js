@@ -40,7 +40,6 @@ const App = () => {
                                 <Route component={HomePage} />
                             </Switch>
                         </div>
-                        <Footer />
                     </div>
                 </div>
             </Router>

@@ -10,7 +10,7 @@ const Landing = () => (
             <div className={`${cb}__content-wrapper`}>
                 <div className={`${cb}__title-wrapper`}>
                     <h1 className={`${cb}__heading ${cb}__slide-in`}>Alex Charland</h1>
-                    <h2 className={`${cb}__subheading ${cb}__slide-in`}>Test-Driven Full-Stack Developer</h2>
+                    <h2 className={`${cb}__subheading ${cb}__slide-in`}>Full-Stack Mobile & Web Developer</h2>
                     <div className={`${cb}__fade-in`}>
                         <ContactButtons darkMode />
                     </div>
