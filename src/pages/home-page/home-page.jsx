@@ -26,8 +26,8 @@ const HomePage = () => {
     return (
         <div className={cb}>
             <Landing />
-            <Bio />
             <PortfolioCarousel projects={DISPLAY_PROJECTS} />
+            <Bio />
             <Technologies techs={DISPLAY_TECHNOLOGIES} />
             <Contact />
         </div>

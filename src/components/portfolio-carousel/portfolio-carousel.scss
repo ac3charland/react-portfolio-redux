@@ -1,12 +1,45 @@
 @import "../../globals.scss";
 
+.portfolio-divider {
+    margin-top: -12rem;
+    transform: rotate(180deg);
+
+    @include small-screen {
+        margin-top: -6rem;
+    }
+}
+
+.portfolio-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 12rem;
+    z-index: 1;
+    @include small-screen {
+        height: 6rem
+    }
+}
+
+.portfolio-divider .shape-fill {
+    fill: #FFFFFF;
+}
+
+
 .portfolio-carousel {
     padding: 2rem;
-    @include section-styling;
 
     &__heading {
         font-size: $font-size-h3;
         outline: none;
+        margin-top: -8rem;
+        margin-left: 4vw;
+        z-index: 2;
+        position: relative;
+
+        @include small-screen {
+            margin-left: -1rem;
+            margin-top: -4rem;
+        }
     }
 
     &__button-wrapper {
@@ -66,6 +99,10 @@
 
     &__slider-wrapper {
         flex-grow: 2;
+        margin-top: 4rem;
+        @include small-screen {
+            margin-top: 2rem;
+        }
     }
 }
 

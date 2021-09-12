@@ -4,7 +4,7 @@
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 0;
   background-color: transparent;
@@ -27,24 +27,26 @@
       color: $link-color;
       margin-top: 1rem;
 
+      @include small-screen {
+        background-color: transparent;
+      }
+
       &:hover {
         color: $link-hover-color;
       }
     }
-
-    @include small-screen {
-      .navbar__link {
-        background-color: $secondary-background-color;
-        @include transition(background-color 0.3s);
-      }
+    
+    .icon {
+      color: black;
+      padding-top: 1.6rem;
     }
+
   }
 
   &__content-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
-    @include section-styling;
   }
 
   &__home {
@@ -93,7 +95,7 @@
   }
 
   .icon {
-    color: black;
+    color: white;
     display: none;
     padding: 2rem 2rem 1rem;
   }
@@ -110,8 +112,12 @@
       text-align: right;
     }
 
+    &__content-wrapper {
+      padding: 0;
+    }
+
     &__link {
-      background-color: $secondary-background-color;
+      background-color: transparent;
       margin: 0 -2rem 0 0;
       padding: 1rem;
       font-size: $font-size-small;
@@ -128,8 +134,9 @@
 
     .icon {
       display: block;
+      width: 100%;
       font-size: 1.5rem;
-      padding: 0;
+      padding: 1rem 0 0;
       text-align: right;
     }
   }
