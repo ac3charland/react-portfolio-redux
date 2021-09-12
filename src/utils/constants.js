@@ -85,6 +85,11 @@ export const SASS_ICON = generateLogoUrl('sass')
 // Redux Actions
 export const ON_HOME_PAGE = 'ON_HOME_PAGE'
 export const LEAVING_HOME_PAGE = 'LEAVING_HOME_PAGE'
+export const ABOVE_SCROLL_THRESHOLD = 'ABOVE_SCROLL_THRESHOLD'
+export const BELOW_SCROLL_THRESHOLD = 'BELOW_SCROLL_THRESHOLD'
+
+// Programmatic CSS
+export const SCROLL_CHANGE_THRESHOLD = 20
 
 // Technologies
 class Technology {

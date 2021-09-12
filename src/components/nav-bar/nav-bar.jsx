@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux'
 import './nav-bar.scss'
 import Logo from './logo512.png'
 import {RESUME_URL, PROJECTS_ID, CONTACT_ID, TECHNOLOGIES_ID, ROOT_URL} from '../../utils/constants'
+import {getIsNavBarActive} from '../../selectors/app'
 
 const cb = 'navbar'
 
@@ -18,8 +19,10 @@ const NavBar = () => {
     const menuCSS = menuOpen ? 'open' : 'closed'
     const menuIcon = menuOpen ? 'fa-times' : 'fa-bars'
 
+    const isNavBarActive = useSelector(getIsNavBarActive)
+
     return (
-        <div className={cb}>
+        <div className={`${cb} ${isNavBarActive ? 'active' : ''}`}>
             <div className={`${cb}__content-wrapper`}>
                 <a className={`${cb}__home`} href='/'>
                     <img className={`${cb}__logo`} src={Logo} alt='Alex Charland Frontend Web Developer Site Logo' />
