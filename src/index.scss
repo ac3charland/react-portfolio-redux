@@ -79,9 +79,4 @@ a {
 .page-wrapper {
   flex-grow: 2;
   background-color: $off-white;
-  padding-bottom: 2rem;
-
-  @include small-screen {
-    padding-bottom: 1rem;
-  }
 }

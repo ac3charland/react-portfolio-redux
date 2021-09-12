@@ -1,20 +1,38 @@
 @import "../../globals.scss";
 
+$spacer-height: 20rem;
+
 .bio {
-    background-color: $secondary-background-color;
+    margin-top: -8.2rem;
+    background-image: url('/project-images/bio.jpg');
+    background-position-y: bottom;
+    background-position-x: left;
+    background-size: cover;
+    position: relative;
+
+    @include small-screen {
+        background-position-x: center;
+    }
 
     &__content-wrapper {
         @include section-styling;
-        padding: 2rem 2rem 4rem;
+        max-width: 150rem;
+        padding: 0 10rem 0;
+
+        @include small-screen {
+            padding: 0;
+        }
     }
 
     &__heading {
-        font-size: $font-size-h3;
+        font-size: $font-size-h1;
         padding-bottom: 2rem;
+        text-align: center;
     }
 
     &__flex {
         display: flex;
+        justify-content: flex-end;
     }
 
     &__image-wrapper {
@@ -30,13 +48,46 @@
     }
 
     &__copy-wrapper {
+        width: 45rem;
+        margin-top: -2rem;
+        padding: 4rem 4rem calc(4rem + #{$spacer-height});
+        color: white;
+        background-color: rgba(10, 10, 10, 0.6);
+        text-align: justify;
+
+        @include small-screen {
+            width: 100%;
+            margin-top: 0;
+            padding-bottom: $spacer-height;
+        }
+
         p {
             font-size: $font-size-h5;
             padding-bottom: 2rem;
 
             @include small-screen {
-                font-size: $font-size-large;
+                font-size: $font-size-h6;
             }
         }
+
+        a {
+            color: white;
+            &:focus,
+            &:hover {
+                color: $primary-lighter;
+            }
+        }
+    }
+
+    &__spacer {
+        width: 100%;
+        height: $spacer-height;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        background-image: url('/project-images/layered-waves-haikei.svg');
+        z-index: 3;
+        position: absolute;
+        bottom: 0;
     }
 }

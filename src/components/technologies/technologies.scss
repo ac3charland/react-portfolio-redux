@@ -9,9 +9,14 @@
     }
 
     &__heading {
-        font-size: $font-size-h3;
+        font-size: $font-size-h1;
         padding-bottom: 2rem;
         outline: none;
+        text-align: center;
+
+        @include small-screen {
+            font-size: $font-size-h2;
+        }
     }
 
     &__techs-wrapper {

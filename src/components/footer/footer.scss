@@ -3,7 +3,9 @@
 .footer {
     text-align: center;
     padding: 1rem 1rem 2rem;
-    background-color: $secondary-background-color;
+    color: white;
+    position: relative;
+    z-index: 2;
 
     &__text {
         margin: 0.5rem auto;

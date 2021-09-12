@@ -22,7 +22,7 @@ describe('NavBar', () => {
         expect(component.find(`.${cb} a`).length).toEqual(5)
         expect(component.find(`.${cb} button`).length).toEqual(1)
         expect(component.find(`.${cb}__home`).prop('href')).toEqual('/')
-        expect(component.find(`.${cb}__link`).at(0).prop('href')).toEqual('/resume')
+        expect(component.find(`.${cb}__link`).at(0).prop('href')).toEqual('https://tinyurl.com/yc8h9fx3')
         expect(component.find(`.${cb}__link`).at(1).prop('href')).toEqual('/#projects')
         expect(component.find(`.${cb}__link`).at(2).prop('href')).toEqual('/#technologies')
         expect(component.find(`.${cb}__link`).at(3).prop('href')).toEqual('/#contact')
@@ -35,7 +35,7 @@ describe('NavBar', () => {
         expect(component.find(`.${cb} a`).length).toEqual(2)
         expect(component.find(`.${cb} button`).length).toEqual(4)
         expect(component.find(`.${cb}__home`).prop('href')).toEqual('/')
-        expect(component.find(`.${cb}__link`).at(0).prop('href')).toEqual('/resume')
+        expect(component.find(`.${cb}__link`).at(0).prop('href')).toEqual('https://tinyurl.com/yc8h9fx3')
     })
 
     it('toggles between open and closed', () => {

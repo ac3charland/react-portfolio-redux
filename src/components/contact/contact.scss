@@ -1,17 +1,48 @@
 @import '../../globals.scss';
 
 .contact {
-    @include section-styling;
-    padding: 2rem;
+    position: relative;
+    background-color: $secondary-background-color;
+
+    &::before {
+        content: '';
+        border-top-left-radius: 55% 100%;
+        border-top-right-radius: 55% 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 120%;
+        left: -10%;
+        right: -10%;
+        background-color: $primary-color;
+
+        @include small-screen {
+            width: 150%;
+            left: -25%;
+            right: -25%;
+        }
+    }
 
     &__heading {
-        font-size: $font-size-h3;
+        font-size: $font-size-h1;
         outline: none;
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        padding-top: 2rem;
+        color: white;
+
+        @include small-screen {
+            padding-top: 4rem;
+        }
     }
 
     &__buttons-wrapper {
-        max-width: 80rem;
+        max-width: 60rem;
         margin: 0 auto;
-        padding: 2rem 0;
+        padding: 2rem;
+        z-index: 2;
+        position: relative;
+
     }
 }

@@ -20,6 +20,6 @@ module.exports = backstop.config({
     ],
     scenarios: [
         cs({label: 'home-page', delay: 4000}),
-        cs({label: 'secondary', onReadyScript: 'navigate-to-secondary.js'}),
+        cs({label: 'home-page-dup', delay: 4000}),
     ]
 })
