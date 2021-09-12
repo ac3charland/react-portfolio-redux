@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {useSelector} from 'react-redux'
 import './nav-bar.scss'
 import Logo from './logo512.png'
-import {RESUME_URL, PROJECTS_ID, CONTACT_ID, TECHNOLOGIES_ID, ROOT_URL} from '../../utils/constants'
+import {RESUME_DOWNLOAD_URL, PROJECTS_ID, CONTACT_ID, TECHNOLOGIES_ID, ROOT_URL} from '../../utils/constants'
 import {getIsNavBarActive} from '../../selectors/app'
 
 const cb = 'navbar'
@@ -29,7 +29,7 @@ const NavBar = () => {
                 </a>
                 <div className={`${cb}__links ${menuCSS}`}>
                     <button className={`icon ${menuCSS}`} onClick={toggleMenu}><i className={`fa ${menuIcon}`}></i></button>
-                    <a id={'resume-link'} className={`${cb}__link ${menuCSS}`} href={RESUME_URL}>Resume</a>
+                    <a id={'resume-link'} className={`${cb}__link ${menuCSS}`} href={RESUME_DOWNLOAD_URL}>Resume</a>
                     {onHomePage ?
                         <React.Fragment>
                             <button id={'projects-link'} className={`${cb}__link ${menuCSS}`} onClick={() => scrollToElement(PROJECTS_ID)}>Projects</button>

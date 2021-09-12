@@ -36,7 +36,6 @@ const App = () => {
                         <div className='page-wrapper'>
                             <Switch>
                                 <Route exact path={ROOT_URL} component={HomePage} />
-                                <Route exact path={RESUME_URL} component={ResumePage} />
                                 <Route component={HomePage} />
                             </Switch>
                         </div>
