@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {useSelector} from 'react-redux'
 import './nav-bar.scss'
 import Logo from './logo512.png'
-import {RESUME_DOWNLOAD_URL, PROJECTS_ID, CONTACT_ID, TECHNOLOGIES_ID, ROOT_URL} from '../../utils/constants'
+import {RESUME_DOWNLOAD_URL, PROJECTS_ID, CONTACT_ID, TECHNOLOGIES_ID, ROOT_URL, BIO_ID} from '../../utils/constants'
 import {getIsNavBarActive} from '../../selectors/app'
 
 const cb = 'navbar'
@@ -14,6 +14,26 @@ const NavBar = () => {
 
     const toggleMenu = () => {
         setMenu(!menuOpen)
+    }
+
+    const scrollToElement = id => {
+        const e = document.getElementById(id)
+        if (e) {
+            setMenu(false)
+            let offset = 110
+            if (id === PROJECTS_ID) {
+                offset = 170
+            }
+            const bodyRect = document.body.getBoundingClientRect().top
+            const elementRect = e.getBoundingClientRect().top
+            const elementPosition = elementRect - bodyRect
+            const offsetPosition = elementPosition - offset
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+            })
+            setTimeout(() => e.focus(), 1000)
+        }
     }
 
     const menuCSS = menuOpen ? 'open' : 'closed'
@@ -33,6 +53,7 @@ const NavBar = () => {
                     {onHomePage ?
                         <React.Fragment>
                             <button id={'projects-link'} className={`${cb}__link ${menuCSS}`} onClick={() => scrollToElement(PROJECTS_ID)}>Projects</button>
+                            <button id={'projects-link'} className={`${cb}__link ${menuCSS}`} onClick={() => scrollToElement(BIO_ID)}>About</button>
                             <button id={'technologies-link'} className={`${cb}__link ${menuCSS}`} onClick={() => scrollToElement(TECHNOLOGIES_ID)}>Skills</button>
                             <button id={'contact-link'} className={`${cb}__link ${menuCSS}`} onClick={() => scrollToElement(CONTACT_ID)}>Contact</button>
                         </React.Fragment> :
@@ -46,16 +67,6 @@ const NavBar = () => {
             </div>
         </div>
     )
-}
-
-const scrollToElement = id => {
-    const e = document.getElementById(id)
-    if (e) {
-        e.scrollIntoView({
-            behavior: 'smooth',
-        })
-        setTimeout(() => e.focus(), 1000)
-    }
 }
 
 export default NavBar

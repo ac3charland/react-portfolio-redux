@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
+import smoothscroll from 'smoothscroll-polyfill'
 import './index.scss'
 import * as serviceWorker from './serviceWorker'
 import makeStore from './store'
 import App from './app'
 
 const store = makeStore()
+smoothscroll.polyfill()
 
 ReactDOM.render(
   <Provider store={store}>
