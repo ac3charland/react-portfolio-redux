@@ -5,6 +5,7 @@ export const emptyFunction = () => {}
 
 // Section IDs
 export const PROJECTS_ID = 'projects'
+export const BIO_ID = 'bio'
 export const TECHNOLOGIES_ID = 'technologies'
 export const CONTACT_ID = 'contact'
 export const RESUME_ID = 'resume-heading'

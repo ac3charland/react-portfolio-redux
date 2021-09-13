@@ -1,11 +1,11 @@
 import React from 'react'
 import './bio.scss'
-import {BEST_BUY_URL, BOOTCAMP_URL, MUSIC_URL, GITHUB_PROFILE_URL, NM_URL, EWIPATCHES_URL} from '../../utils/constants'
+import {BEST_BUY_URL, BOOTCAMP_URL, MUSIC_URL, GITHUB_PROFILE_URL, NM_URL, EWIPATCHES_URL, BIO_ID} from '../../utils/constants'
 
 const cb = 'bio'
 
 const Bio = () => (
-    <div className={cb}>
+    <div className={cb} id={BIO_ID}>
         <div className={`${cb}__content-wrapper`}>
             <div className={`${cb}__flex`}>
                 <div className={`${cb}__copy-wrapper`}>

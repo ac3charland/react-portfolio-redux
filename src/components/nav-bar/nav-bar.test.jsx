@@ -33,7 +33,7 @@ describe('NavBar', () => {
         const component = render()
         expect(component.find(`.${cb}`).length).toEqual(1)
         expect(component.find(`.${cb} a`).length).toEqual(2)
-        expect(component.find(`.${cb} button`).length).toEqual(4)
+        expect(component.find(`.${cb} button`).length).toEqual(5)
         expect(component.find(`.${cb}__home`).prop('href')).toEqual('/')
         expect(component.find(`.${cb}__link`).at(0).prop('href')).toEqual('https://tinyurl.com/yc8h9fx3')
     })
