@@ -20,7 +20,6 @@ context('Page Navigation', () => {
         cy.get(HomePage.contactHeading).should('have.focus')
 
         cy.get(NavBar.homeLink).click()
-        cy.url().should('contain', '/')
-        cy.get(HomePage.wrapper)
+        cy.get(NavBar.homeLink).should('have.focus')
     })
 })

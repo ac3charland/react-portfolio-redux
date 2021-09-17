@@ -44,9 +44,9 @@ const NavBar = () => {
     return (
         <div className={`${cb} ${isNavBarActive ? 'active' : ''}`}>
             <div className={`${cb}__content-wrapper`}>
-                <a className={`${cb}__home`} href='/'>
+                <button className={`${cb}__home`} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
                     <img className={`${cb}__logo`} src={Logo} alt='Alex Charland Frontend Web Developer Site Logo' />
-                </a>
+                </button>
                 <div className={`${cb}__links ${menuCSS}`}>
                     <button className={`icon ${menuCSS}`} onClick={toggleMenu}><i className={`fa ${menuIcon}`}></i></button>
                     <a id={'resume-link'} className={`${cb}__link ${menuCSS}`} href={RESUME_DOWNLOAD_URL}>Resume</a>
