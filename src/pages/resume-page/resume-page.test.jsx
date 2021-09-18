@@ -18,7 +18,7 @@ describe('ResumePage', () => {
 
         expect(component.find(`.${cb}__button`).at(0).prop('href')).toEqual('/')
         expect(component.find(`.${cb}__button`).at(1).prop('href')).toEqual('https://github.com/ac3charland')
-        expect(component.find(`.${cb}__download-button`).prop('href')).toEqual('https://tinyurl.com/yc8h9fx3')
+        expect(component.find(`.${cb}__download-button`).prop('href')).toEqual('https://tinyurl.com/5n6urxe8')
 
         expect(component.find(`.${cb}__question`).at(0).find('a').at(0).prop('href')).toEqual('https://github.com/ac3charland')
         expect(component.find(`.${cb}__question`).at(0).find('a').at(1).prop('href')).toEqual('/')
