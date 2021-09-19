@@ -65,8 +65,8 @@ $heading-offset: 4rem;
         padding-right: $button-inner-padding;
         background: linear-gradient(
             90deg,
-            rgba(255, 253, 249, 1) 0%,
-            rgba(255, 253, 249, 0.94) 75%,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.94) 75%,
             rgba(255, 255, 255, 0.01) 100%
         );
     }
@@ -76,8 +76,8 @@ $heading-offset: 4rem;
         background: linear-gradient(
             90deg,
             rgba(255, 255, 255, 0.01) 0%,
-            rgba(255, 253, 249, 0.94) 25%,
-            rgb(255, 253, 249) 100%
+            rgba(255, 255, 255, 0.94) 25%,
+            rgb(255, 255, 255) 100%
         );
     }
 
