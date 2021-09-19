@@ -5,16 +5,19 @@
 
     &__content-wrapper {
         @include section-styling;
-        padding: 2rem 2rem 4rem;
+        padding: 0 2rem 4rem;
     }
 
     &__heading {
         font-size: $font-size-h1;
-        padding-bottom: 2rem;
+        color: $primary-color;
+        padding-bottom: 4rem;
         outline: none;
-        text-align: center;
+        margin-left: calc((100% - 4 * (#{$tech-size})) / 8);
 
         @include small-screen {
+            text-align: center;
+            margin-left: 0;
             font-size: $font-size-h2;
         }
     }

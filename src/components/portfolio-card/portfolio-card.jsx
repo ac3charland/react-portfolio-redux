@@ -17,7 +17,7 @@ const PortfolioCard = props => {
             <div id={`card-${id}`} className={cb} style={{transition}}>
                 <div className={`${cb}__flex-column-wrapper`}>
                     <div className={`${cb}__title-wrapper`}>
-                        <h3 className={`${cb}__heading`}>{name}</h3>
+                        <h3 className={`${cb}__heading`}>{name?.toUpperCase()}</h3>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a className={`${cb}__image-wrapper`} href={!disabled ? url ? url : github : null} target='_blank' rel='noopener noreferrer'>
                             <img className={`${cb}__image`} src={image} alt={`Screenshot of ${name}`} />

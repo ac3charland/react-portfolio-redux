@@ -38,7 +38,7 @@ describe('PortfolioCard', () => {
 
         expect(component.find(`.${cb}`).length).toEqual(1)
 
-        expect(component.find(`.${cb}__heading`).text()).toEqual('Your mother was a hamster and your father smelled of elderberries')
+        expect(component.find(`.${cb}__heading`).text()).toEqual('YOUR MOTHER WAS A HAMSTER AND YOUR FATHER SMELLED OF ELDERBERRIES')
         expect(component.find(`.${cb}__image`).prop('src')).toEqual('johncleese.jpg')
         expect(component.find(`.${cb}__image`).prop('alt')).toEqual('Screenshot of Your mother was a hamster and your father smelled of elderberries')
         expect(component.find(`.${cb}__description`).text()).toEqual('That sure is a long title')

@@ -11,7 +11,7 @@
   @include transition(background-color 0.3s, height 0.1s);
 
   &.active {
-    background-color: $primary-lightest;
+    background-color: white;
     border-bottom: 1px solid #ccc;
 
     .navbar__logo {
@@ -25,23 +25,23 @@
     }
 
     .navbar__link {
-      color: $link-color;
+      color: $secondary-color;
       margin-top: 1rem;
 
       @include small-screen {
         background-color: transparent;
       }
 
+      &:focus,
       &:hover {
-        color: $link-hover-color;
+        color: $secondary-lightest;
       }
     }
-    
+
     .icon {
-      color: black;
+      color: $primary-color;
       padding-top: 1.6rem;
     }
-
   }
 
   &__content-wrapper {
@@ -84,15 +84,17 @@
     padding: 0.5rem 0;
     color: white;
     margin-left: 3rem;
-    margin-top: 0rem;
-    font-size: $font-size-h5;
-    font-family: $heading-font;
+    margin-top: 0.5rem;
+    font-size: $font-size-h6;
+    font-family: $secondary-font;
+    font-weight: 500;
     text-decoration: none;
+    outline: none;
     @include transition(margin-top 0.2s, color 0.18s);
 
     &:focus,
     &:hover {
-      color: $link-hover-color;
+      color: $secondary-lighter;
     }
   }
 
@@ -107,6 +109,12 @@
 
     &__heading {
       font-size: $font-size-small;
+    }
+
+    &__home {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     &__links {

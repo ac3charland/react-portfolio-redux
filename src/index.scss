@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  font-family: $body-font;
+  font-family: $sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: $font-size-normal;
@@ -31,7 +31,7 @@ button {
 
 @include headings {
   margin: 0;
-  font-family: $heading-font;
+  font-family: $sans-serif;
 }
 
 p {
