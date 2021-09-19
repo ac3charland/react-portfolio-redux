@@ -9,6 +9,7 @@ export const BIO_ID = 'bio'
 export const TECHNOLOGIES_ID = 'technologies'
 export const CONTACT_ID = 'contact'
 export const RESUME_ID = 'resume-heading'
+export const HOME_ID = 'home'
 
 // External URLs
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/alex-charland/'
@@ -175,7 +176,7 @@ export const SHREDDIT = new Project(
 
 export const CHARLANDS_WED = new Project(
     'Charlands Wed',
-    'The perk of being a web developer is that you get to build your own wedding website!',
+    'One of the perks of being a web developer is building your own wedding website!',
     [REACT, JEST, BACKSTOP, CYPRESS],
     CHARLANDS_WED_IMAGE,
     'https://www.charlandswed.com/',

@@ -72,9 +72,13 @@ $spacer-height: 20rem;
 
         a {
             color: white;
+            @include transition(color 0.12s);
+            text-decoration-thickness: 1px;
+
             &:focus,
             &:hover {
-                color: $primary-lighter;
+                outline: none;
+                color: $secondary-lighter;
             }
         }
     }

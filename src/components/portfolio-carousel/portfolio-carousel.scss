@@ -40,6 +40,7 @@ $heading-offset: 4rem;
         margin-left: 4vw;
         z-index: 2;
         position: relative;
+        color: $primary-color;
 
         @include small-screen {
             margin-left: -1rem;
@@ -84,10 +85,11 @@ $heading-offset: 4rem;
         padding: 0;
         i {
             font-size: 5rem;
-            color: $link-color;
+            color: $primary-color;
+            @include transition(color 0.18s);
 
             &:hover {
-                color: $link-hover-color;
+                color: $primary-lighter;
             }
 
             @include small-screen {

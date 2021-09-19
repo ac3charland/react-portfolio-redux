@@ -1,5 +1,7 @@
 $content-width: 120rem;
 
+$tech-size: 130px;
+
 $font-size-h1: 6rem;
 $font-size-h2: 4rem;
 $font-size-h3: 3rem;
@@ -16,7 +18,10 @@ $primary-darker: #041a55;
 $primary-lighter: #5985ff;
 $primary-lightest: #deecff;
 
-$secondary-lightest: #ffeca8;
+$secondary-color: #C44F21;
+$secondary-darker: #a33910;
+$secondary-lighter: #cf6a42;
+$secondary-lightest: #f8bca5;
 $tertiary-lightest: #ffd9a8;
 $off-white: #fffdf9;
 
@@ -24,9 +29,9 @@ $secondary-background-color: $primary-lightest;
 $link-color: $primary-color;
 $link-hover-color: $primary-lighter;
 
-$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+$sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
-$heading-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+$secondary-font: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
 
 $initial-offscreen-position: translateX(100rem);
