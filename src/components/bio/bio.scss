@@ -17,7 +17,7 @@ $spacer-height: 20rem;
     &__content-wrapper {
         @include section-styling;
         max-width: 150rem;
-        padding: 0 10rem 0;
+        padding: 0 5rem 0;
 
         @include small-screen {
             padding: 0;

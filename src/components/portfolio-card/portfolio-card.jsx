@@ -11,7 +11,7 @@ const PortfolioCard = props => {
     const {project, id, transition = 'none', disabled, handleFocus = emptyFunction} = props
     
     if (project) {
-        const {name, desc, technologies = [], image, url, github} = project
+        const {name, desc, technologies = [], image, url, github, apple, google} = project
 
         return (
             <div id={`card-${id}`} className={cb} style={{transition}}>
@@ -50,6 +50,24 @@ const PortfolioCard = props => {
                                 <a className={`${cb}__link`} href={!disabled ? github : null} target='_blank' rel='noopener noreferrer' onFocus={() => handleFocus()}>
                                     <i className='fa fa-github-square' aria-hidden='true'></i>
                                     <NewWindowScreenReaderWarning customMessage='Github Link (Opens a new window)' />
+                                </a>
+                            </div>
+                        }
+                        {apple &&
+                            <div className={`${cb}__link-wrapper`}>
+                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                                <a className={`${cb}__link`} href={!disabled ? apple : null} target='_blank' rel='noopener noreferrer' onFocus={() => handleFocus()}>
+                                <i className='fa fa-apple' aria-hidden='true'></i>
+                                    <NewWindowScreenReaderWarning customMessage='Apple App Store Link (Opens a new window)' />
+                                </a>
+                            </div>
+                        }
+                        {google &&
+                            <div className={`${cb}__link-wrapper`}>
+                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                                <a className={`${cb}__link`} href={!disabled ? google : null} target='_blank' rel='noopener noreferrer' onFocus={() => handleFocus()}>
+                                <i className='fa fa-android' aria-hidden='true'></i>
+                                    <NewWindowScreenReaderWarning customMessage='Google Play Link (Opens a new window)' />
                                 </a>
                             </div>
                         }
