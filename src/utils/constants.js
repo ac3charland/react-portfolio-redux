@@ -105,8 +105,8 @@ class Technology {
 
 export const HTML = new Technology('HTML5 (incl. Accessibility)', HTML_ICON, HTML_URL)
 export const CSS = new Technology('CSS3 (incl. Flexbox & Animations)', CSS_ICON, CSS_URL)
-export const JAVASCRIPT = new Technology('Javascript (ES6)', JS_ICON, JS_URL)
-export const TYPESCRIPT = new Technology('Typescript', TS_ICON, TS_URL)
+export const JAVASCRIPT = new Technology('JavaScript (ES6)', JS_ICON, JS_URL)
+export const TYPESCRIPT = new Technology('TypeScript', TS_ICON, TS_URL)
 export const GIT = new Technology('Git (incl. Git Flow)', GIT_ICON, GIT_URL)
 export const REACT = new Technology('React (incl. Hooks)', REACT_ICON, REACT_URL)
 export const REACT_NATIVE = new Technology('React Native', REACT_NATIVE_ICON, REACT_NATIVE_URL)
@@ -135,7 +135,7 @@ export const DISPLAY_TECHNOLOGIES = [
     GIT,
     MIKRO_ORM,
     MYSQL,
-    MONGODB,
+    NODE,
     JEST,
     BACKSTOP,
     CYPRESS,
@@ -146,13 +146,15 @@ export const DISPLAY_TECHNOLOGIES = [
 
 // Projects
 class Project {
-    constructor(name, desc, technologies, image, url, github) {
+    constructor(name, desc, technologies, image, url, github, apple, google) {
         this.name = name
         this.desc = desc
         this.technologies = technologies || []
         this.image = image
         this.url = url
         this.github = github
+        this.apple = apple
+        this.google = google
     }
 }
 
@@ -221,11 +223,13 @@ export const JACOB_BICKNASE = new Project(
 
 export const DARN_KNIT_ANYWAY = new Project(
     'Darn Knit Anyway',
-    'Full-stack React Native mobile app built for Stillwater, Minnesota-based knitting store Darn Knit Anyway. Featuring push notifications, a custom CMS for managing store updates, and utilization of local device storage, it is set to be released by October 2021.',
+    'Full-stack React Native mobile app built for Stillwater, Minnesota-based knitting store Darn Knit Anyway. Features push notifications and a custom-built CMS.',
     [REACT_NATIVE, REDUX, EXPRESS, NODE, TYPESCRIPT],
     DKA_IMAGE,
     null,
-    null
+    null,
+    'https://apps.apple.com/us/app/darn-knit-anyway/id1587184358',
+    'https://play.google.com/store/apps/details?id=com.darnknitanyway.darnknitanyway'
 )
 
 export const DISPLAY_PROJECTS = [

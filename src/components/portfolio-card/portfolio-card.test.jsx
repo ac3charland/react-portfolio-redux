@@ -26,6 +26,8 @@ describe('PortfolioCard', () => {
                 image: 'johncleese.jpg',
                 url: 'montypythonisthebomb.com',
                 github: 'Creative github url string',
+                apple: 'Brought back magsafe!',
+                google: 'Don\'t be evil?',
             },
             id: 42,
         }
@@ -64,6 +66,18 @@ describe('PortfolioCard', () => {
         expect(component.find(`.${cb}__link`).at(1).prop('rel')).toEqual('noopener noreferrer')
         expect(component.find(`.${cb}__link i`).at(1).prop('aria-hidden')).toEqual('true')
         expect(component.find(`.${cb}__link .sr-only`).at(1).text()).toEqual('Github Link (Opens a new window)')
+
+        expect(component.find(`.${cb}__link`).at(2).prop('href')).toEqual('Brought back magsafe!')
+        expect(component.find(`.${cb}__link`).at(2).prop('target')).toEqual('_blank')
+        expect(component.find(`.${cb}__link`).at(2).prop('rel')).toEqual('noopener noreferrer')
+        expect(component.find(`.${cb}__link i`).at(2).prop('aria-hidden')).toEqual('true')
+        expect(component.find(`.${cb}__link .sr-only`).at(2).text()).toEqual('Apple App Store Link (Opens a new window)')
+
+        expect(component.find(`.${cb}__link`).at(3).prop('href')).toEqual('Don\'t be evil?')
+        expect(component.find(`.${cb}__link`).at(3).prop('target')).toEqual('_blank')
+        expect(component.find(`.${cb}__link`).at(3).prop('rel')).toEqual('noopener noreferrer')
+        expect(component.find(`.${cb}__link i`).at(3).prop('aria-hidden')).toEqual('true')
+        expect(component.find(`.${cb}__link .sr-only`).at(3).text()).toEqual('Google Play Link (Opens a new window)')
     })
 
 
