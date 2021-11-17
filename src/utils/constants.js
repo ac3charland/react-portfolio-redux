@@ -45,6 +45,7 @@ export const AWS_URL = 'https://aws.amazon.com/'
 export const NODE_URL = 'https://nodejs.org/en/'
 export const EXPRESS_URL = 'https://expressjs.com/'
 export const SASS_URL = 'https://sass-lang.com/'
+export const GRAPHQL_URL = 'https://graphql.org/'
 
 // Image URLs
 export const SITE_LOGO = 'logo512.png'
@@ -60,6 +61,7 @@ export const TEMPLATE_APP_IMAGE = generateProjectUrl('template')
 export const WAFFLE_TIMER_IMAGE = generateProjectUrl('waffletimer')
 export const JACOB_BICKNASE_IMAGE = generateProjectUrl('jacobbicknase')
 export const DKA_IMAGE = generateProjectUrl('dka')
+export const GHIBLI_IMAGE = generateProjectUrl('ghibliql')
 
 // Tech logos
 const generateLogoUrl = file => `/tech-logos/${file}.jpg`
@@ -84,6 +86,7 @@ export const AWS_ICON = generateLogoUrl('aws')
 export const NODE_ICON = generateLogoUrl('node')
 export const EXPRESS_ICON = generateLogoUrl('express')
 export const SASS_ICON = generateLogoUrl('sass')
+export const GRAPHQL_ICON = generateLogoUrl('graphql')
 
 // Redux Actions
 export const ON_HOME_PAGE = 'ON_HOME_PAGE'
@@ -124,16 +127,17 @@ export const AWS = new Technology('Amazon Web Services', AWS_ICON, AWS_URL)
 export const NODE = new Technology('Node.js', NODE_ICON, NODE_URL)
 export const EXPRESS = new Technology('Express.js', EXPRESS_ICON, EXPRESS_URL)
 export const SASS = new Technology('CSS Preprocessors (SASS & LESS)', SASS_ICON, SASS_URL)
+export const GRAPHQL = new Technology('GraphQL', GRAPHQL_ICON, GRAPHQL_URL)
 
 export const DISPLAY_TECHNOLOGIES = [
     REACT,
     REACT_NATIVE,
     REDUX,
-    EXPRESS,
+    GRAPHQL,
     TYPESCRIPT,
     JAVASCRIPT,
     GIT,
-    MIKRO_ORM,
+    EXPRESS,
     MYSQL,
     NODE,
     JEST,
@@ -232,8 +236,18 @@ export const DARN_KNIT_ANYWAY = new Project(
     'https://play.google.com/store/apps/details?id=com.darnknitanyway.darnknitanyway'
 )
 
+export const GHIBLI_QL = new Project(
+    'GhibliQL',
+    'Full-stack React/GraphQL application using Apollo and Apollo Server to serve information about the films of Studio Ghibli.',
+    [REACT, GRAPHQL, TYPESCRIPT, NODE],
+    GHIBLI_IMAGE,
+    'https://sheltered-wildwood-08016.herokuapp.com/',
+    'https://github.com/ac3charland/graphql-react-practice'
+)
+
 export const DISPLAY_PROJECTS = [
     CHARLANDS_WED, 
+    GHIBLI_QL,
     DARN_KNIT_ANYWAY,
     JACOB_BICKNASE,
     EWIPATCHES,
