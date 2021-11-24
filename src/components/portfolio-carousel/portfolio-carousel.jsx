@@ -77,7 +77,7 @@ const PortfolioCarousel = ({projects}) => {
                 </svg>
             </div>
             <div className={cb}>
-                <h2 id={PROJECTS_ID} className={`${cb}__heading`} tabIndex='-1'>Projects</h2>
+                <h2 id={PROJECTS_ID} className={`${cb}__heading`} tabIndex='-1'>Work</h2>
                 <div className={`${cb}__flex`}>
                     <div className={`${cb}__button-wrapper ${cb}__left`}>
                         <button className={`${cb}__button`} tabIndex={-1} onClick={prevProject}>
