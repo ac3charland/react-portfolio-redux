@@ -246,7 +246,6 @@ export const GHIBLI_QL = new Project(
 )
 
 export const DISPLAY_PROJECTS = [
-    CHARLANDS_WED, 
     GHIBLI_QL,
     DARN_KNIT_ANYWAY,
     JACOB_BICKNASE,
