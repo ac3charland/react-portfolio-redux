@@ -62,6 +62,7 @@ export const WAFFLE_TIMER_IMAGE = generateProjectUrl('waffletimer')
 export const JACOB_BICKNASE_IMAGE = generateProjectUrl('jacobbicknase')
 export const DKA_IMAGE = generateProjectUrl('dka')
 export const GHIBLI_IMAGE = generateProjectUrl('ghibliql')
+export const BSK_IMAGE = generateProjectUrl('bsk')
 
 // Tech logos
 const generateLogoUrl = file => `/tech-logos/${file}.jpg`
@@ -245,12 +246,21 @@ export const GHIBLI_QL = new Project(
     'https://github.com/ac3charland/graphql-react-practice'
 )
 
+export const BSK_MASTERSOUND = new Project(
+    'BSK Mastersound',
+    'Portfolio for recording engineer Bruce Kasprzyk, with a serverless AWS-powered contact form.',
+    [REACT, REDUX, AWS, SASS, CYPRESS],
+    BSK_IMAGE,
+    'https://www.bskmastersound.com',
+    null
+)
+
 export const DISPLAY_PROJECTS = [
     GHIBLI_QL,
+    BSK_MASTERSOUND,
     DARN_KNIT_ANYWAY,
     JACOB_BICKNASE,
     EWIPATCHES,
     WAFFLE_TIMER, 
-    TEMPLATE_APP,
 ]
 
