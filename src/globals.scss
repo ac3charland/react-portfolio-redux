@@ -99,6 +99,14 @@ $initial-offscreen-position: translateX(100rem);
     transition: $args;
 }
 
+@mixin transform($args...) {
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -ms-transform: $args;
+    -o-transform: $args;
+    transform: $args;
+}
+
 @mixin section-styling {
     max-width: $content-width;
     margin: 0 auto;
@@ -157,6 +165,25 @@ $initial-offscreen-position: translateX(100rem);
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@include keyframes(opacityLoop) {
+    0% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
 }
 
 @include keyframes(backgroundColorLoop) {

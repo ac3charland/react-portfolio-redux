@@ -1,0 +1,36 @@
+@import "../../globals.scss";
+
+.signup {
+    &__wrapper {
+        
+        max-width: 32rem;
+    
+        #custom-substack-embed {
+            .csw-substack-gradient-custom {
+                max-width: none;
+                height: 4rem;
+                border-radius: 4px;
+
+                button {
+                    font-size: $font-size-large;
+                }
+            }
+            .success {
+                color: $off-white;
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 3.6rem;
+        @include small-screen {
+            font-size: $font-size-h3;
+        }
+    }
+
+    &__subheading {
+        color: #ddd;
+        font-size: $font-size-h6;
+        margin-bottom: 1rem;
+    }
+}

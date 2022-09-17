@@ -24,7 +24,7 @@ const Technologies = ({techs}) => {
     return (
         <div className={cb}>
             <div className={`${cb}__content-wrapper`}>
-                <h2 id={TECHNOLOGIES_ID} className={`${cb}__heading`} tabIndex='-1'>Skills & Technologies</h2>
+                <h2 id={TECHNOLOGIES_ID} className={`${cb}__heading`} tabIndex='-1'>Technologies</h2>
                 <div className={`${cb}__techs-wrapper techs-container active-card-${selectedTech}`}>
                     {techs.map((tech, idx) => (
                         <div key={`tech-${idx}`} className={`${cb}__tech-wrapper`}>

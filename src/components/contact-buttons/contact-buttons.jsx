@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './contact-buttons.scss'
-import {LINKEDIN_URL, GITHUB_PROFILE_URL, EMAIL_URL} from '../../utils/constants'
+import {LINKEDIN_URL, GITHUB_PROFILE_URL, EMAIL_URL, INSTAGRAM_URL} from '../../utils/constants'
 
 const cb = 'contact-buttons'
 
@@ -24,6 +24,11 @@ const ContactButtons = ({darkMode}) => {
                     href={EMAIL_URL}
                     icon='fa-envelope'
                     srMessage='Send an email (Opens a new window)'
+                />
+                <ContactButton
+                    href={INSTAGRAM_URL}
+                    icon='fa-instagram'
+                    srMessage='Link to Github Profile'
                 />
             </div>
         </div>

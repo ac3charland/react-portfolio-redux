@@ -18,7 +18,8 @@ $heading-offset: 4rem;
     height: 12rem;
     z-index: 1;
     @include small-screen {
-        height: 6rem
+        height: 3rem;
+        bottom: 1px;
     }
 }
 
@@ -173,6 +174,11 @@ $i: 0;
     display: block;
     width: calc(133% + 1.3px);
     height: 8.2rem;
+
+    @include small-screen {
+        height: 4rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .portfolio-divider-bottom .shape-fill {

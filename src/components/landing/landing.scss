@@ -1,31 +1,145 @@
 @import "../../globals.scss";
 
 .landing {
-  // background-color: $primary-lightest;
-  // @include background-animation;
-  background-image: url("./landing-image.jpg");
-  background-size: cover;
   color: $off-white;
   box-sizing: border-box;
-  
-  &__background-overlay {
-    background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+
+  &__signup-wrapper {
+    opacity: 0;
+    @include animation("fadeIn 0.5s forwards");
+    animation-delay: 2.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20rem;
+    margin-right: 2rem;
+    z-index: 2;
 
     @include small-screen {
-      background-color: rgba(0, 0, 0, 0.6);
+      padding: 3rem 0 10rem;
+      flex-direction: row;
+
     }
   }
-  
+
+  &__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position-x: center;
+    z-index: 0;
+    @include transition(opacity 0.4s);
+    opacity: 0;
+
+    &-active {
+      opacity: 0.6;
+    }
+  }
+
+  &__background-musician {
+    background-image: url("./musician.jpg");
+    @include small-screen {
+      background-position: right -10rem top 0;
+    }
+  }
+
+  &__background-developer {
+    background-image: url("./developer.jpg");
+    @include small-screen {
+      background-position: right -4rem top 0;
+    }
+  }
+
+  &__background-creator {
+    background-image: url("./creator.jpg");
+  }
+
+  &__slideshow-wrapper {
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    color: $off-white;
+    font-size: 6rem;
+    margin: 1rem 0 -6rem;
+
+    @include small-screen {
+      font-size: $font-size-h2;
+      margin-left: -4rem;
+      margin-bottom: -2.5rem;
+    }
+
+    div {
+      flex: 1;
+    }
+  }
+
+  &__current-word {
+    @include transform(rotateX(0deg));
+    opacity: 1;
+
+    &-transition {
+      @include transform(rotateX(90deg));
+      opacity: 0;
+    }
+  }
+
+  &__next-word {
+    @include transform(rotateX(90deg));
+
+    &-transition {
+      @include transform(rotateX(0deg));
+    }
+  }
+
+  &__variable-word-container {
+    text-align: right;
+    font-weight: 400;
+
+    &-transition {
+      font-weight: 400;
+      text-align: right;
+      // Causing imprecision
+      @include transform(translateY(-7rem));
+
+      @include small-screen {
+        @include transform(translateY(-4.5rem));
+      }
+    }
+  }
+
+  &__background-overlay {
+    background-color: #000;
+    z-index: 2;
+    @include small-screen {
+      background-color: #000;
+    }
+  }
+
   &__content-wrapper {
-    margin: 0 2rem;
+    margin: 0 8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    @include small-screen {
+      flex-direction: column;
+      margin: 0 3rem;
+    }
   }
 
   &__title-wrapper {
-    padding: 37rem 2rem 14rem;
+    padding: 37rem 0 14rem;
     text-align: right;
+    min-width: 39rem;
     @include small-screen {
-      padding-top: 30rem;
+      padding-top: 20rem;
+      padding-bottom: 5rem;
       min-height: 10.5rem;
+      min-width: unset;
     }
   }
 
@@ -40,17 +154,15 @@
   }
 
   &__subheading {
-    font-size: $font-size-h4;
     animation-delay: 1.5s;
 
     @include small-screen {
-      max-width: 32.5rem;
-      margin: 0 0 0 auto;
+      margin-left: 0;
     }
   }
 
   &__fade-in {
-    max-width: 37rem;
+    max-width: 41rem;
     margin: 0 0 0 auto;
     opacity: 0;
 
