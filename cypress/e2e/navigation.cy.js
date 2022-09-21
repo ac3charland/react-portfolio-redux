@@ -4,6 +4,7 @@ import HomePage from '../page/home-page'
 context('Page Navigation', () => {
     beforeEach(() => {
         cy.server()
+        // cy.intercept('https://substackapi.com/widget.js', [])
     })
 
     it('navigates to proper pages with navbar links', () => {
