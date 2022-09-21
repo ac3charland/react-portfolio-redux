@@ -25,7 +25,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['*.spec.js', '*.test.jsx'],
+            files: ['*.test.jsx', '*.cy.js'],
             globals: {
                 mount: 'readonly',
                 shallow: 'readonly',
@@ -37,7 +37,7 @@ module.exports = {
             }
         },
         {
-            files: ['*.spec.js'],
+            files: ['*.cy.js'],
             rules: {
                 'jest/expect-expect': 'off'
             }
