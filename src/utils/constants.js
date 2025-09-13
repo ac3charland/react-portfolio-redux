@@ -17,6 +17,7 @@ export const GITHUB_PROFILE_URL = 'https://github.com/ac3charland'
 export const EMAIL_URL = 'https://tinyurl.com/y8nas45z'
 export const BASH_PROFILE_URL = 'https://github.com/ac3charland/BashProfile'
 export const READGEEK_SCRAPER_URL = 'https://github.com/ac3charland/ReadGeekScraper'
+// Link in TinyUrl Account; Stored in Dropbox
 export const RESUME_DOWNLOAD_URL = 'https://tinyurl.com/3vch4axy'
 export const BEST_BUY_URL = 'https://www.bestbuy.com/'
 export const NM_URL = 'https://www.northwesternmutual.com/'
@@ -265,10 +266,8 @@ export const BSK_MASTERSOUND = new Project(
 )
 
 export const DISPLAY_PROJECTS = [
-    GHIBLI_QL,
     BSK_MASTERSOUND,
     DARN_KNIT_ANYWAY,
     JACOB_BICKNASE,
-    WAFFLE_TIMER, 
 ]
 
